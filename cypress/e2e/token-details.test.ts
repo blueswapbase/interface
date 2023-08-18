@@ -86,7 +86,7 @@ describe('Token details', () => {
     // Warning label should show if relevant ([spec](https://www.notion.so/3f7fce6f93694be08a94a6984d50298e))
     cy.get('[data-cy="token-safety-message"]')
       .should('include.text', 'Warning')
-      .and('include.text', "This token isn't traded on leading U.S. centralized exchanges")
+      .and('include.text', "This token isn't traded on leading centralized exchanges")
   })
 
   describe('swapping', () => {
