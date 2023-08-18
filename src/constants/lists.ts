@@ -6,6 +6,7 @@ const BA_LIST = 'https://raw.githubusercontent.com/The-Blockchain-Association/se
 // TODO(WEB-2282): Re-enable CMC list once we have a better solution for handling large lists.
 // const CMC_ALL_LIST = 'https://s3.coinmarketcap.com/generated/dex/tokens/eth-tokens-all.json'
 const COINGECKO_LIST = 'https://tokens.coingecko.com/uniswap/all.json'
+const COINGECKO_BASE_LIST = 'https://tokens.coingecko.com/base/all.json'
 const COINGECKO_BNB_LIST = 'https://tokens.coingecko.com/binance-smart-chain/all.json'
 const COINGECKO_ARBITRUM_LIST = 'https://tokens.coingecko.com/arbitrum-one/all.json'
 const COINGECKO_OPTIMISM_LIST = 'https://tokens.coingecko.com/optimistic-ethereum/all.json'
@@ -30,11 +31,15 @@ export const BASE_LIST =
 export const UNSUPPORTED_LIST_URLS: string[] = [BA_LIST, UNI_UNSUPPORTED_LIST]
 
 // default lists to be 'active' aka searched across
-export const DEFAULT_ACTIVE_LIST_URLS: string[] = [UNI_LIST]
-export const DEFAULT_INACTIVE_LIST_URLS: string[] = [
+export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
+  UNI_LIST,
   UNI_EXTENDED_LIST,
   COMPOUND_LIST,
   AAVE_LIST,
+  COINGECKO_BASE_LIST,
+  BASE_LIST,
+]
+export const DEFAULT_INACTIVE_LIST_URLS: string[] = [
   //  CMC_ALL_LIST,
   COINGECKO_LIST,
   COINGECKO_BNB_LIST,
@@ -52,7 +57,6 @@ export const DEFAULT_INACTIVE_LIST_URLS: string[] = [
   CELO_LIST,
   PLASMA_BNB_LIST,
   AVALANCHE_LIST,
-  BASE_LIST,
   ...UNSUPPORTED_LIST_URLS,
 ]
 
