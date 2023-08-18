@@ -1,6 +1,6 @@
+import { ChainId, Currency } from '@uniswap/sdk-core'
 import blankTokenUrl from 'assets/svg/blank_token.svg'
 import { ReactComponent as UnknownStatus } from 'assets/svg/contract-interaction.svg'
-import { ChainId, Currency } from 'blueswap-sdk-core'
 import { MissingImageLogo } from 'components/Logo/AssetLogo'
 import { Unicon } from 'components/Unicon'
 import { getChainInfo } from 'constants/chainInfo'

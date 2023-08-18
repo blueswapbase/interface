@@ -1,5 +1,8 @@
 import { Trans } from '@lingui/macro'
-import { SUPPORTED_LOCALES } from 'constants/locales'
+import Column from 'components/Column'
+import Row from 'components/Row'
+import { LOCALE_LABEL } from 'constants/locales'
+import { useCurrencyConversionFlagEnabled } from 'featureFlags/flags/currencyConversion'
 import { useActiveLocale } from 'hooks/useActiveLocale'
 import { ReactNode } from 'react'
 import { ChevronRight } from 'react-feather'
@@ -7,7 +10,9 @@ import styled from 'styled-components'
 import { ClickableStyle, ThemedText } from 'theme'
 import ThemeToggle from 'theme/components/ThemeToggle'
 
+import { AnalyticsToggle } from './AnalyticsToggle'
 import { GitVersionRow } from './GitVersionRow'
+import { LanguageMenuItems } from './LanguageMenu'
 import { SlideOutMenu } from './SlideOutMenu'
 import { SmallBalanceToggle } from './SmallBalanceToggle'
 import { TestnetsToggle } from './TestnetsToggle'
@@ -73,23 +78,37 @@ export default function SettingsMenu({
 
   return (
     <SlideOutMenu title={<Trans>Settings</Trans>} onClose={onClose}>
-      <SectionTitle>
-        <Trans>Preferences</Trans>
-      </SectionTitle>
-      <ToggleWrapper>
-        <ThemeToggle />
-        <SmallBalanceToggle />
-        <AnalyticsToggle />
-        <TestnetsToggle />
-      </ToggleWrapper>
+      <Container>
+        <div>
+          <SectionTitle data-testid="wallet-header">
+            <Trans>Preferences</Trans>
+          </SectionTitle>
+          <ToggleWrapper>
+            <ThemeToggle />
+            <SmallBalanceToggle />
+            <AnalyticsToggle />
+            <TestnetsToggle />
+          </ToggleWrapper>
+          {!currencyConversionEnabled && (
+            <>
+              <SectionTitle data-testid="wallet-header">
+                <Trans>Language</Trans>
+              </SectionTitle>
+              <LanguageMenuItems />
+            </>
+          )}
 
-      <SectionTitle data-testid="wallet-header">
-        <Trans>Language</Trans>
-      </SectionTitle>
-      {SUPPORTED_LOCALES.map((locale) => (
-        <LanguageMenuItem locale={locale} isActive={activeLocale === locale} key={locale} />
-      ))}
-      <GitVersionRow />
+          {currencyConversionEnabled && (
+            <SettingsButton
+              title={<Trans>Language</Trans>}
+              currentState={LOCALE_LABEL[activeLocale]}
+              onClick={openLanguageSettings}
+              testId="language-settings-button"
+            />
+          )}
+        </div>
+        <GitVersionRow />
+      </Container>
     </SlideOutMenu>
   )
 }

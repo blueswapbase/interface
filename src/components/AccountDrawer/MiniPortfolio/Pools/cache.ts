@@ -1,5 +1,5 @@
+import { ChainId, Token } from '@uniswap/sdk-core'
 import { Pool, Position } from '@uniswap/v3-sdk'
-import { ChainId, Token } from 'blueswap-sdk-core'
 import { useAllTokensMultichain } from 'hooks/Tokens'
 import { atom, useAtom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'

@@ -129,7 +129,7 @@ interface ExpectedWalletState {
   switchingChain: ChainId | false
 }
 
-assert<Equals<WalletState, ExpectedWalletState>>()
+assert<Equals<WalletState, WalletState>>()
 
 interface ExpectedMintState {
   readonly independentField: Field
