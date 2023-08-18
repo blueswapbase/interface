@@ -1,5 +1,5 @@
-import { Currency } from '@uniswap/sdk-core'
 import { ReactComponent as PapersIcon } from 'assets/svg/papers-text.svg'
+import { Currency } from 'blueswap-sdk-core'
 import { LoaderV3 } from 'components/Icons/LoadingSpinner'
 import CurrencyLogo from 'components/Logo/CurrencyLogo'
 import { useUnmountingAnimation } from 'hooks/useUnmountingAnimation'

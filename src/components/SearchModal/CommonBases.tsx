@@ -1,6 +1,6 @@
 import { BrowserEvent, InterfaceElementName, InterfaceEventName } from '@uniswap/analytics-events'
-import { Currency } from '@uniswap/sdk-core'
 import { TraceEvent } from 'analytics'
+import { Currency } from 'blueswap-sdk-core'
 import { AutoColumn } from 'components/Column'
 import CurrencyLogo from 'components/Logo/CurrencyLogo'
 import { AutoRow } from 'components/Row'
@@ -18,8 +18,8 @@ const MobileWrapper = styled(AutoColumn)`
 `
 
 const BaseWrapper = styled.div<{ disable?: boolean }>`
-  border: 1px solid ${({ theme, disable }) => (disable ? theme.accentActive : theme.backgroundOutline)};
-  border-radius: 16px;
+  border: 2px solid ${({ theme, disable }) => (disable ? theme.accentActive : theme.backgroundOutline)};
+  border-radius: 5px;
   display: flex;
   padding: 6px;
   padding-right: 12px;

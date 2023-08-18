@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { ChainId } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { ChainId } from 'blueswap-sdk-core'
 import { getChainInfoOrDefault, L2ChainInfo } from 'constants/chainInfo'
 import { AlertTriangle } from 'react-feather'
 import styled from 'styled-components'
@@ -35,7 +35,7 @@ const TitleText = styled.div`
 `
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 12px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   bottom: 60px;
   display: none;

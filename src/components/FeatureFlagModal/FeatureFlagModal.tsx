@@ -25,12 +25,12 @@ const StyledModal = styled.div`
   font-size: 18px;
   padding: 20px;
   background-color: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 12px;
-  border: 1px solid ${({ theme }) => theme.backgroundOutline};
+  border-radius: 5px;
+  border: 2px solid ${({ theme }) => theme.backgroundOutline};
   z-index: 100;
   flex-direction: column;
   gap: 8px;
-  border: 1px solid ${({ theme }) => theme.backgroundOutline};
+  border: 2px solid ${({ theme }) => theme.backgroundOutline};
 `
 
 function Modal({ open, children }: { open: boolean; children: ReactNode }) {
@@ -83,17 +83,17 @@ const FlagDescription = styled.span`
   align-items: center;
 `
 const FlagVariantSelection = styled.select`
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 8px;
-  background: ${({ theme }) => theme.backgroundInteractive};
+  background: ${({ theme }) => theme.backgroundModule};
   font-weight: 600;
   font-size: 16px;
-  border: none;
+  border: 2px solid ${({ theme }) => theme.backgroundOutline};
   color: ${({ theme }) => theme.textPrimary};
   cursor: pointer;
 
   :hover {
-    background: ${({ theme }) => theme.backgroundOutline};
+    background: ${({ theme }) => theme.stateOverlayHover};
   }
 `
 
@@ -104,17 +104,17 @@ const FlagInfo = styled.div`
 `
 
 const SaveButton = styled.button`
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 8px;
-  background: ${({ theme }) => theme.backgroundInteractive};
+  background: ${({ theme }) => theme.backgroundModule};
   font-weight: 600;
   font-size: 16px;
-  border: none;
+  border: 2px solid ${({ theme }) => theme.backgroundOutline};
   color: ${({ theme }) => theme.textPrimary};
   cursor: pointer;
 
   :hover {
-    background: ${({ theme }) => theme.backgroundOutline};
+    background: ${({ theme }) => theme.stateOverlayHover};
   }
 `
 

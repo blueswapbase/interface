@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro'
-import { LOCALE_LABEL, SUPPORTED_LOCALES, SupportedLocale } from 'constants/locales'
+import { LOCALE_LABEL, SupportedLocale } from 'constants/locales'
 import { useActiveLocale } from 'hooks/useActiveLocale'
 import { useLocationLinkProps } from 'hooks/useLocationLinkProps'
 import { Check } from 'react-feather'
@@ -8,7 +8,6 @@ import styled, { useTheme } from 'styled-components'
 import { ClickableStyle, ThemedText } from 'theme'
 import ThemeToggle from 'theme/components/ThemeToggle'
 
-import { AnalyticsToggle } from './AnalyticsToggle'
 import { GitVersionRow } from './GitVersionRow'
 import { SlideOutMenu } from './SlideOutMenu'
 import { SmallBalanceToggle } from './SmallBalanceToggle'
@@ -64,16 +63,8 @@ export default function SettingsMenu({ onClose }: { onClose: () => void }) {
       <ToggleWrapper>
         <ThemeToggle />
         <SmallBalanceToggle />
-        <AnalyticsToggle />
         <TestnetsToggle />
       </ToggleWrapper>
-
-      <SectionTitle data-testid="wallet-header">
-        <Trans>Language</Trans>
-      </SectionTitle>
-      {SUPPORTED_LOCALES.map((locale) => (
-        <LanguageMenuItem locale={locale} isActive={activeLocale === locale} key={locale} />
-      ))}
       <GitVersionRow />
     </SlideOutMenu>
   )

@@ -1,5 +1,5 @@
-import { ChainId } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { ChainId } from 'blueswap-sdk-core'
 import styled from 'styled-components'
 import { MEDIA_WIDTHS } from 'theme'
 

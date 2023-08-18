@@ -13,7 +13,6 @@ import { flexColumnNoWrap } from 'theme/styles'
 
 import ConnectionErrorView from './ConnectionErrorView'
 import Option from './Option'
-import PrivacyPolicyNotice from './PrivacyPolicyNotice'
 
 const Wrapper = styled.div`
   ${flexColumnNoWrap};
@@ -66,9 +65,6 @@ export default function WalletModal({ openSettings }: { openSettings: () => void
                 <Option key={connection.getName()} connection={connection} />
               ))}
           </OptionGrid>
-          <PrivacyPolicyWrapper>
-            <PrivacyPolicyNotice />
-          </PrivacyPolicyWrapper>
         </AutoColumn>
       )}
     </Wrapper>

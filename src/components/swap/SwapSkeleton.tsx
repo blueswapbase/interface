@@ -20,8 +20,8 @@ const LoadingWrapper = styled.div`
   justify-content: space-between;
 
   padding: 8px;
-  border: ${({ theme }) => `1px solid ${theme.backgroundOutline}`};
-  border-radius: 16px;
+  border: ${({ theme }) => `2px solid ${theme.backgroundOutline}`};
+  border-radius: 5px;
   background-color: ${({ theme }) => theme.backgroundSurface};
 `
 
@@ -51,7 +51,7 @@ const InputColumn = styled.div`
   display: flex;
   flex-flow: column;
   background-color: ${({ theme }) => theme.backgroundModule};
-  border-radius: 16px;
+  border-radius: 5px;
   display: flex;
   gap: 30px;
   padding: 48px 12px;

@@ -1,4 +1,5 @@
-import { Price, WETH9 } from '@uniswap/sdk-core'
+import { Price } from '@uniswap/sdk-core'
+import { WETH9 } from 'blueswap-sdk-core'
 import { USDC_MAINNET } from 'constants/tokens'
 import { Field } from 'state/mint/actions'
 import { render, screen } from 'test-utils/render'

@@ -15,7 +15,7 @@ const TitleRow = styled.div`
 `
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.accentWarningSoft};
-  border-radius: 16px;
+  border-radius: 5px;
   margin-top: 12px;
   max-width: 480px;
   padding: 12px 20px;

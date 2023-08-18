@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { ChainId, Currency, CurrencyAmount, Percent, TradeType } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { ChainId, Currency, CurrencyAmount, Percent, TradeType } from 'blueswap-sdk-core'
 import useAutoSlippageTolerance from 'hooks/useAutoSlippageTolerance'
 import { useDebouncedTrade } from 'hooks/useDebouncedTrade'
 import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount'

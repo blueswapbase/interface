@@ -5,7 +5,7 @@ import { sprinkles, themeVars, vars } from '../../nft/css/sprinkles.css'
 export const hover = style([
   sprinkles({
     transition: '250',
-    borderRadius: '12',
+    borderRadius: '4',
   }),
   {
     ':hover': {

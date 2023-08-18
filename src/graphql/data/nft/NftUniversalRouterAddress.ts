@@ -1,5 +1,5 @@
-import { ChainId } from '@uniswap/sdk-core'
 import { UNIVERSAL_ROUTER_ADDRESS } from '@uniswap/universal-router-sdk'
+import { ChainId } from 'blueswap-sdk-core'
 import { isSupportedChain } from 'constants/chains'
 import gql from 'graphql-tag'
 

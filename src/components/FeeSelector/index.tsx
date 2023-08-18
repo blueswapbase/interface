@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro'
-import { Currency } from '@uniswap/sdk-core'
 import { FeeAmount } from '@uniswap/v3-sdk'
 import { useWeb3React } from '@web3-react/core'
+import { Currency } from 'blueswap-sdk-core'
 import { sendEvent } from 'components/analytics'
 import { ButtonGray } from 'components/Button'
 import Card from 'components/Card'
@@ -34,7 +34,8 @@ const pulse = (color: string) => keyframes`
   }
 `
 const FocusedOutlineCard = styled(Card)<{ pulsing: boolean }>`
-  border: 1px solid ${({ theme }) => theme.backgroundInteractive};
+  border: 2px solid ${({ theme }) => theme.backgroundOutline};
+  border-radius: 5px,
   animation: ${({ pulsing, theme }) => pulsing && pulse(theme.accentAction)} 0.6s linear;
   align-self: center;
 `
@@ -174,7 +175,7 @@ export default function FeeSelector({
               )}
             </AutoColumn>
 
-            <ButtonGray onClick={() => setShowOptions(!showOptions)} width="auto" padding="4px" $borderRadius="6px">
+            <ButtonGray onClick={() => setShowOptions(!showOptions)} width="auto" padding="4px" $borderRadius="5px">
               {showOptions ? <Trans>Hide</Trans> : <Trans>Edit</Trans>}
             </ButtonGray>
           </RowBetween>

@@ -77,7 +77,7 @@ const BestPriceContainer = styled.div`
   padding: 12px;
   background-color: ${({ theme }) => theme.backgroundSurface};
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
-  border-radius: 16px;
+  border-radius: 5px;
 `
 
 const HeaderRow = styled.div`

@@ -8,10 +8,10 @@ import {
   SharedEventName,
   SwapEventName,
 } from '@uniswap/analytics-events'
-import { ChainId, Currency, CurrencyAmount, Percent, Token } from '@uniswap/sdk-core'
 import { UNIVERSAL_ROUTER_ADDRESS } from '@uniswap/universal-router-sdk'
 import { useWeb3React } from '@web3-react/core'
 import { sendAnalyticsEvent, Trace, TraceEvent, useTrace } from 'analytics'
+import { ChainId, Currency, CurrencyAmount, Percent, Token } from 'blueswap-sdk-core'
 import { useToggleAccountDrawer } from 'components/AccountDrawer'
 import AddressInputPanel from 'components/AddressInputPanel'
 import { ButtonError, ButtonLight, ButtonPrimary } from 'components/Button'
@@ -75,7 +75,7 @@ export const ArrowContainer = styled.div`
 
 const SwapSection = styled.div`
   background-color: ${({ theme }) => theme.backgroundModule};
-  border-radius: 16px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.textSecondary};
   font-size: 14px;
   font-weight: 500;
@@ -97,7 +97,7 @@ const SwapSection = styled.div`
     height: 100%;
     pointer-events: none;
     content: '';
-    border: 1px solid ${({ theme }) => theme.backgroundModule};
+    border: 2px solid ${({ theme }) => theme.backgroundModule};
   }
 
   &:hover:before {
@@ -110,7 +110,7 @@ const SwapSection = styled.div`
 `
 
 const OutputSwapSection = styled(SwapSection)`
-  border-bottom: ${({ theme }) => `1px solid ${theme.backgroundSurface}`};
+  border-bottom: ${({ theme }) => `2px solid ${theme.backgroundSurface}`};
 `
 
 function getIsValidSwapQuote(
@@ -664,13 +664,13 @@ export function Swap({
         {showPriceImpactWarning && <PriceImpactWarning priceImpact={largerPriceImpact} />}
         <div>
           {swapIsUnsupported ? (
-            <ButtonPrimary $borderRadius="16px" disabled={true}>
+            <ButtonPrimary $borderRadius="5px" disabled={true}>
               <ThemedText.DeprecatedMain mb="4px">
                 <Trans>Unsupported Asset</Trans>
               </ThemedText.DeprecatedMain>
             </ButtonPrimary>
           ) : switchingChain ? (
-            <ButtonPrimary $borderRadius="16px" disabled={true}>
+            <ButtonPrimary $borderRadius="5px" disabled={true}>
               <Trans>Connecting to {getChainInfo(switchingChain)?.label}</Trans>
             </ButtonPrimary>
           ) : !account ? (
@@ -680,13 +680,13 @@ export function Swap({
               properties={{ received_swap_quote: getIsValidSwapQuote(trade, tradeState, swapInputError) }}
               element={InterfaceElementName.CONNECT_WALLET_BUTTON}
             >
-              <ButtonLight onClick={toggleWalletDrawer} fontWeight={600} $borderRadius="16px">
+              <ButtonLight onClick={toggleWalletDrawer} fontWeight={600} $borderRadius="5px">
                 <Trans>Connect Wallet</Trans>
               </ButtonLight>
             </TraceEvent>
           ) : chainId && chainId !== connectedChainId ? (
             <ButtonPrimary
-              $borderRadius="16px"
+              $borderRadius="5px"
               onClick={async () => {
                 try {
                   await switchChain(connector, chainId)
@@ -704,7 +704,7 @@ export function Swap({
             </ButtonPrimary>
           ) : showWrap ? (
             <ButtonPrimary
-              $borderRadius="16px"
+              $borderRadius="5px"
               disabled={Boolean(wrapInputError)}
               onClick={handleOnWrap}
               fontWeight={600}

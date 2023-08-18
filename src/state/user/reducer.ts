@@ -69,7 +69,7 @@ export const initialState: UserState = {
   pairs: {},
   timestamp: currentTimestamp(),
   URLWarningVisible: true,
-  hideBaseWalletBanner: false,
+  hideBaseWalletBanner: true,
   showSurveyPopup: undefined,
 }
 

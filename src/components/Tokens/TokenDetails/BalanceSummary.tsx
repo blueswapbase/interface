@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { ChainId, Currency } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { ChainId, Currency } from 'blueswap-sdk-core'
 import CurrencyLogo from 'components/Logo/CurrencyLogo'
 import { getChainInfo } from 'constants/chainInfo'
 import { asSupportedChain } from 'constants/chains'
@@ -13,8 +13,8 @@ import { formatCurrencyAmount, NumberType } from 'utils/formatNumbers'
 const BalancesCard = styled.div`
   box-shadow: ${({ theme }) => theme.shallowShadow};
   background-color: ${({ theme }) => theme.backgroundSurface};
-  border: ${({ theme }) => `1px solid ${theme.backgroundOutline}`};
-  border-radius: 16px;
+  border: ${({ theme }) => `2px solid ${theme.backgroundOutline}`};
+  border-radius: 5px;
   color: ${({ theme }) => theme.textPrimary};
   display: none;
   height: fit-content;

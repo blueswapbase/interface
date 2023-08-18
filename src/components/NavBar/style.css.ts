@@ -63,7 +63,7 @@ const baseMenuItem = style([
     paddingX: { sm: '6', md: '14' },
     marginY: '4',
     marginX: { sm: '4', md: '0' },
-    borderRadius: '12',
+    borderRadius: '4',
     transition: '250',
     height: 'min',
     width: 'full',

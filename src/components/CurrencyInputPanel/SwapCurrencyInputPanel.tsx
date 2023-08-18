@@ -1,9 +1,9 @@
 import { Trans } from '@lingui/macro'
 import { BrowserEvent, InterfaceElementName, SwapEventName } from '@uniswap/analytics-events'
-import { Currency, CurrencyAmount, Percent } from '@uniswap/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
 import { TraceEvent } from 'analytics'
+import { Currency, CurrencyAmount, Percent } from 'blueswap-sdk-core'
 import PrefetchBalancesWrapper from 'components/AccountDrawer/PrefetchBalancesWrapper'
 import { AutoColumn } from 'components/Column'
 import { LoadingOpacityContainer, loadingOpacityMixin } from 'components/Loader/styled'
@@ -29,7 +29,7 @@ import { FiatValue } from './FiatValue'
 const InputPanel = styled.div<{ hideInput?: boolean }>`
   ${flexColumnNoWrap};
   position: relative;
-  border-radius: ${({ hideInput }) => (hideInput ? '16px' : '20px')};
+  border-radius: ${({ hideInput }) => (hideInput ? '5px' : '5px')};
   z-index: 1;
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
   transition: height 1s ease;
@@ -40,7 +40,7 @@ const FixedContainer = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  border-radius: 20px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +49,7 @@ const FixedContainer = styled.div`
 
 const Container = styled.div<{ hideInput: boolean }>`
   min-height: 44px;
-  border-radius: ${({ hideInput }) => (hideInput ? '16px' : '20px')};
+  border-radius: ${({ hideInput }) => (hideInput ? '5px' : '5px')};
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
 `
 
@@ -66,7 +66,7 @@ const CurrencySelect = styled(ButtonGray)<{
   color: ${({ selected, theme }) => (selected ? theme.textPrimary : theme.white)};
   cursor: pointer;
   height: unset;
-  border-radius: 16px;
+  border-radius: 5px;
   outline: none;
   user-select: none;
   border: none;
@@ -257,7 +257,7 @@ export default function SwapCurrencyInputPanel({
       )}
       <Container hideInput={hideInput}>
         <ThemedText.SubHeaderSmall color="textTertiary">{label}</ThemedText.SubHeaderSmall>
-        <InputRow style={hideInput ? { padding: '0', borderRadius: '8px' } : {}}>
+        <InputRow style={hideInput ? { padding: '0', borderRadius: '5px' } : {}}>
           {!hideInput && (
             <StyledNumericalInput
               className="token-amount-input"

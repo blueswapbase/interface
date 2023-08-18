@@ -42,7 +42,7 @@ export default function ConnectionErrorView() {
           The connection attempt failed. Please click try again and follow the steps to connect in your wallet.
         </Trans>
       </ThemedText.BodyPrimary>
-      <ButtonPrimary $borderRadius="16px" onClick={retry}>
+      <ButtonPrimary $borderRadius="5px" onClick={retry}>
         <Trans>Try Again</Trans>
       </ButtonPrimary>
       <ButtonEmpty width="fit-content" padding="0" marginTop={20}>

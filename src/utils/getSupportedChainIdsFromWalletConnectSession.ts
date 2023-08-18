@@ -1,5 +1,5 @@
-import { SupportedChainsType } from '@uniswap/sdk-core'
 import type { SessionTypes } from '@walletconnect/types'
+import { SupportedChainsType } from 'blueswap-sdk-core'
 
 // Helper function to extract chainId from string in format 'eip155:{chainId}'
 function getChainIdFromFormattedString(item: string): number | null {

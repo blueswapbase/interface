@@ -1,9 +1,9 @@
 import { Trans } from '@lingui/macro'
 import { BrowserEvent, InterfaceElementName, SwapEventName } from '@uniswap/analytics-events'
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
 import { TraceEvent } from 'analytics'
+import { Currency, CurrencyAmount } from 'blueswap-sdk-core'
 import { LoadingOpacityContainer, loadingOpacityMixin } from 'components/Loader/styled'
 import { isSupportedChain } from 'constants/chains'
 import { darken } from 'polished'
@@ -26,8 +26,8 @@ import { FiatValue } from './FiatValue'
 const InputPanel = styled.div<{ hideInput?: boolean }>`
   ${flexColumnNoWrap};
   position: relative;
-  border-radius: ${({ hideInput }) => (hideInput ? '16px' : '20px')};
-  background-color: ${({ theme, hideInput }) => (hideInput ? 'transparent' : theme.backgroundInteractive)};
+  border-radius: ${({ hideInput }) => (hideInput ? '5px' : '5px')};
+  background-color: ${({ theme, hideInput }) => (hideInput ? 'transparent' : 'transparent')};
   z-index: 1;
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
   transition: height 1s ease;
@@ -35,16 +35,16 @@ const InputPanel = styled.div<{ hideInput?: boolean }>`
 `
 
 const Container = styled.div<{ hideInput: boolean; disabled: boolean }>`
-  border-radius: ${({ hideInput }) => (hideInput ? '16px' : '20px')};
-  border: 1px solid ${({ theme }) => theme.backgroundSurface};
-  background-color: ${({ theme }) => theme.deprecated_bg1};
+  border-radius: ${({ hideInput }) => (hideInput ? '5px' : '5px')};
+  border: 2px solid ${({ theme }) => theme.backgroundOutline};
+  background-color: ${({ theme }) => theme.backgroundModule};
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
   ${({ theme, hideInput, disabled }) =>
     !disabled &&
     `
     :focus,
     :hover {
-      border: 1px solid ${hideInput ? ' transparent' : theme.deprecated_bg3};
+      border: 2px solid ${hideInput ? theme.backgroundOutline : theme.backgroundOutline};
     }
   `}
 `
@@ -57,11 +57,11 @@ const CurrencySelect = styled(ButtonGray)<{
   pointerEvents?: string
 }>`
   align-items: center;
-  background-color: ${({ selected, theme }) => (selected ? theme.backgroundInteractive : theme.accentAction)};
+  background-color: ${({ selected, theme }) => (selected ? theme.backgroundModule : theme.backgroundModule)};
   opacity: ${({ disabled }) => (!disabled ? 1 : 0.4)};
   color: ${({ selected, theme }) => (selected ? theme.textPrimary : theme.white)};
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: 5px;
   outline: none;
   user-select: none;
   border: none;
@@ -132,7 +132,7 @@ const StyledBalanceMax = styled.button<{ disabled?: boolean }>`
   background-color: transparent;
   background-color: ${({ theme }) => theme.deprecated_primary5};
   border: none;
-  border-radius: 12px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.accentAction};
   cursor: pointer;
   font-size: 11px;
@@ -215,7 +215,7 @@ export default function CurrencyInputPanel({
       {!locked && (
         <>
           <Container hideInput={hideInput} disabled={!chainAllowed}>
-            <InputRow style={hideInput ? { padding: '0', borderRadius: '8px' } : {}} selected={!onCurrencySelect}>
+            <InputRow style={hideInput ? { padding: '0', borderRadius: '5px' } : {}} selected={!onCurrencySelect}>
               {!hideInput && (
                 <StyledNumericalInput
                   className="token-amount-input"

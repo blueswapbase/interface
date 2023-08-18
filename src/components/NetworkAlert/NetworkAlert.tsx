@@ -1,10 +1,10 @@
 import { Trans } from '@lingui/macro'
-import { ChainId } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { ChainId } from 'blueswap-sdk-core'
 import { getChainInfo } from 'constants/chainInfo'
 import { ArrowUpRight } from 'react-feather'
 import styled from 'styled-components'
-import { ExternalLink, HideSmall } from 'theme'
+import { ExternalLink } from 'theme'
 import { colors } from 'theme/colors'
 import { useDarkModeManager } from 'theme/components/ThemeToggle'
 
@@ -104,25 +104,13 @@ const BG_COLORS_BY_DARK_MODE_AND_CHAIN_ID: {
 
 const ContentWrapper = styled.div<{ chainId: NetworkAlertChains; darkMode: boolean; logoUrl: string }>`
   background: ${({ chainId, darkMode }) => BG_COLORS_BY_DARK_MODE_AND_CHAIN_ID[darkMode ? 'dark' : 'light'][chainId]};
-  border-radius: 20px;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   overflow: hidden;
   position: relative;
   width: 100%;
-
-  :before {
-    background-image: url(${({ logoUrl }) => logoUrl});
-    background-repeat: no-repeat;
-    background-size: 300px;
-    content: '';
-    height: 300px;
-    opacity: 0.1;
-    position: absolute;
-    transform: rotate(25deg) translate(-90px, -40px);
-    width: 300px;
-    pointer-events: none;
-  }
+  border: solid 2px ${({ theme }) => theme.backgroundOutline};
 `
 const Header = styled.h2`
   font-weight: 600;
@@ -192,9 +180,6 @@ export function NetworkAlert() {
               <Header>
                 <Trans>{label} token bridge</Trans>
               </Header>
-              <HideSmall>
-                <Trans>Deposit tokens to the {label} network.</Trans>
-              </HideSmall>
             </AutoRow>
           </BodyText>
           <StyledArrowUpRight color={textColor} />

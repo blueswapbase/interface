@@ -15,7 +15,7 @@ const TimeOptionsContainer = styled.div`
   justify-content: flex-end;
   margin-top: 4px;
   gap: 4px;
-  border-radius: 16px;
+  border-radius: 5px;
   height: 40px;
   padding: 4px;
   width: fit-content;

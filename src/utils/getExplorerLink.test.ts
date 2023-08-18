@@ -1,4 +1,4 @@
-import { ChainId } from '@uniswap/sdk-core'
+import { ChainId } from 'blueswap-sdk-core'
 
 import { ExplorerDataType, getExplorerLink } from './getExplorerLink'
 

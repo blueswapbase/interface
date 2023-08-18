@@ -1,8 +1,8 @@
 import { Plural, Trans } from '@lingui/macro'
 import { BrowserEvent, InterfaceElementName, SwapEventName } from '@uniswap/analytics-events'
-import { Percent, TradeType } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { TraceEvent } from 'analytics'
+import { Percent, TradeType } from 'blueswap-sdk-core'
 import Column from 'components/Column'
 import { MouseoverTooltip, TooltipSize } from 'components/Tooltip'
 import { SwapResult } from 'hooks/useSwapCallback'
@@ -194,7 +194,7 @@ export default function SwapModalFooter({
               data-testid="confirm-swap-button"
               onClick={onConfirm}
               disabled={disabledConfirm}
-              $borderRadius="12px"
+              $borderRadius="5px"
               id={InterfaceElementName.CONFIRM_SWAP_BUTTON}
             >
               <ThemedText.HeadlineSmall color="accentTextLightPrimary">

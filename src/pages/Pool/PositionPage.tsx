@@ -2,10 +2,11 @@ import { BigNumber } from '@ethersproject/bignumber'
 import type { TransactionResponse } from '@ethersproject/providers'
 import { Trans } from '@lingui/macro'
 import { InterfacePageName } from '@uniswap/analytics-events'
-import { Currency, CurrencyAmount, Fraction, Percent, Price, Token } from '@uniswap/sdk-core'
+import { Price } from '@uniswap/sdk-core'
 import { NonfungiblePositionManager, Pool, Position } from '@uniswap/v3-sdk'
 import { useWeb3React } from '@web3-react/core'
 import { Trace } from 'analytics'
+import { Currency, CurrencyAmount, Fraction, Percent, Token } from 'blueswap-sdk-core'
 import { sendEvent } from 'components/analytics'
 import Badge from 'components/Badge'
 import { ButtonConfirmed, ButtonGray, ButtonPrimary } from 'components/Button'
@@ -136,7 +137,7 @@ const ActionButtonResponsiveRow = styled(ResponsiveRow)`
 `
 
 const ResponsiveButtonConfirmed = styled(ButtonConfirmed)`
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 6px 8px;
   width: fit-content;
   font-size: 16px;
@@ -839,7 +840,7 @@ function PositionPageContent() {
                             disabled={collecting || !!collectMigrationHash}
                             confirmed={!!collectMigrationHash && !isCollectPending}
                             width="fit-content"
-                            style={{ borderRadius: '12px' }}
+                            style={{ borderRadius: '5px' }}
                             padding="4px 8px"
                             onClick={() => setShowConfirm(true)}
                           >

@@ -1,5 +1,5 @@
-import { Token } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { Token } from 'blueswap-sdk-core'
 import { useMemo } from 'react'
 import { PositionDetails } from 'types/position'
 import { hasURL } from 'utils/urlChecks'

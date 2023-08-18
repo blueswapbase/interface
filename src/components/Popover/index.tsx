@@ -33,7 +33,7 @@ export const Arrow = styled.div`
     z-index: 9998;
 
     content: '';
-    border: 1px solid ${({ theme }) => theme.backgroundInteractive};
+    border: 2px solid ${({ theme }) => theme.backgroundInteractive};
     transform: rotate(45deg);
     background: ${({ theme }) => theme.backgroundSurface};
   }

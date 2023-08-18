@@ -19,8 +19,7 @@ export function GitVersionRow() {
     >
       <Tooltip text="Copied" show={isCopied}>
         <ThemedText.BodySmall color="textTertiary">
-          <Trans>Version: </Trans>
-          {' ' + process.env.REACT_APP_GIT_COMMIT_HASH.substring(0, 6)}
+          <Trans>Version 1.0 </Trans>
         </ThemedText.BodySmall>
       </Tooltip>
     </Container>

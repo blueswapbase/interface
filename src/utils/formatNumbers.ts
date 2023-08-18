@@ -1,4 +1,5 @@
-import { Currency, CurrencyAmount, Percent, Price } from '@uniswap/sdk-core'
+import { Price } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount, Percent } from 'blueswap-sdk-core'
 import { DEFAULT_LOCALE } from 'constants/locales'
 
 type Nullish<T> = T | null | undefined

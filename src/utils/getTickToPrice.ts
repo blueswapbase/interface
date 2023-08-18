@@ -1,5 +1,6 @@
-import { Price, Token } from '@uniswap/sdk-core'
+import { Price } from '@uniswap/sdk-core'
 import { tickToPrice } from '@uniswap/v3-sdk'
+import { Token } from 'blueswap-sdk-core'
 
 export function getTickToPrice(baseToken?: Token, quoteToken?: Token, tick?: number): Price<Token, Token> | undefined {
   if (!baseToken || !quoteToken || typeof tick !== 'number') {

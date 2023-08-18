@@ -1,4 +1,4 @@
-import { Price, Token } from '@uniswap/sdk-core'
+import { Price } from '@uniswap/sdk-core'
 import {
   encodeSqrtRatioX96,
   FeeAmount,
@@ -7,6 +7,7 @@ import {
   TICK_SPACINGS,
   TickMath,
 } from '@uniswap/v3-sdk'
+import { Token } from 'blueswap-sdk-core'
 import JSBI from 'jsbi'
 
 export function tryParsePrice(baseToken?: Token, quoteToken?: Token, value?: string) {

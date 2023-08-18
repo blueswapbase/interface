@@ -251,7 +251,7 @@ export default function Pool() {
                         style={{
                           padding: '8px 16px',
                           margin: '0 4px',
-                          borderRadius: '12px',
+                          borderRadius: '5px',
                           width: 'fit-content',
                           fontSize: '14px',
                         }}

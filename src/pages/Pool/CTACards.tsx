@@ -21,7 +21,7 @@ const CTASection = styled.section`
 
 const CTA = styled(ExternalLink)`
   padding: 16px;
-  border-radius: 20px;
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
   border: 1px solid ${({ theme }) => theme.deprecated_bg3};

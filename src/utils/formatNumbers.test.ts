@@ -1,4 +1,5 @@
-import { CurrencyAmount, Percent, Price } from '@uniswap/sdk-core'
+import { Price } from '@uniswap/sdk-core'
+import { CurrencyAmount, Percent } from 'blueswap-sdk-core'
 import { USDC_MAINNET, WBTC } from 'constants/tokens'
 
 import {
