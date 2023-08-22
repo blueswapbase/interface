@@ -6,6 +6,7 @@ import { chainIdToBackendName } from 'graphql/data/util'
 import { useDisableNFTRoutes } from 'hooks/useDisableNFTRoutes'
 import { useIsNftPage } from 'hooks/useIsNftPage'
 import { useIsPoolsPage } from 'hooks/useIsPoolsPage'
+import { useIsSurfPage } from 'hooks/useIsSurfPage'
 import { Box } from 'nft/components/Box'
 import { Row } from 'nft/components/Flex'
 import { useProfilePageState } from 'nft/hooks'
@@ -59,6 +60,7 @@ export const PageTabs = () => {
 
   const isPoolActive = useIsPoolsPage()
   const isNftPage = useIsNftPage()
+  const isSurfActive = useIsSurfPage()
 
   const shouldDisableNFTRoutes = useDisableNFTRoutes()
 
@@ -69,6 +71,9 @@ export const PageTabs = () => {
       </MenuItem>
       <MenuItem href="/pools" dataTestId="pool-nav-link" isActive={isPoolActive}>
         <Trans>Pools</Trans>
+      </MenuItem>
+      <MenuItem href="/surf" dataTestId="surf-nav-link" isActive={isSurfActive}>
+        <Trans>Surf</Trans>
       </MenuItem>
       <Box marginY={{ sm: '4', md: 'unset' }}>
         <MenuDropdown />

@@ -128,9 +128,6 @@ export const MenuDropdown = () => {
         {isOpen && (
           <NavDropdown top={{ sm: 'unset', lg: '56' }} bottom={{ sm: '50', lg: 'unset' }} right="0">
             <Column gap="16">
-              <PrimaryMenuRow to="/swap" close={toggleOpen}>
-                Yield (coming soon)
-              </PrimaryMenuRow>
               <Box
                 display="flex"
                 flexDirection={{ sm: 'row', md: 'column' }}
