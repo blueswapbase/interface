@@ -81,6 +81,7 @@ export const USDC_BASE = new Token(
   'USDbC'
 )
 export const BLUE_BASE = new Token(ChainId.BASE, '0x30136B90e532141FeD006c61105cff3668b5c774', 18, 'BlueSwap', 'BLUE')
+export const TOSHI_BASE = new Token(ChainID.BASE, '0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4', 18, 'TOSHI', 'TOSHI')
 
 export const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
 export const DAI_ARBITRUM_ONE = new Token(
