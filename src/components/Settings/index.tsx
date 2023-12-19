@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { Percent } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { Percent } from 'blueswap-sdk-core'
 import { Scrim } from 'components/AccountDrawer'
 import AnimatedDropdown from 'components/AnimatedDropdown'
 import Column, { AutoColumn } from 'components/Column'

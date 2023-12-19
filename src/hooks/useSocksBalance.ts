@@ -1,5 +1,5 @@
-import { ChainId, SOCKS_CONTROLLER_ADDRESSES, Token } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { ChainId, SOCKS_CONTROLLER_ADDRESSES, Token } from 'blueswap-sdk-core'
 import { useMemo } from 'react'
 import { useTokenBalance } from 'state/connection/hooks'
 

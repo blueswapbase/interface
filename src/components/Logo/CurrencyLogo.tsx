@@ -1,5 +1,5 @@
-import { Currency } from '@uniswap/sdk-core'
 import { TokenInfo } from '@uniswap/token-lists'
+import { Currency } from 'blueswap-sdk-core'
 
 import AssetLogo, { AssetLogoBaseProps } from './AssetLogo'
 

@@ -1,5 +1,5 @@
-import { Percent, TradeType } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { Percent, TradeType } from 'blueswap-sdk-core'
 import { PermitSignature } from 'hooks/usePermitAllowance'
 import { useCallback } from 'react'
 import { InterfaceTrade, TradeFillType } from 'state/routing/types'

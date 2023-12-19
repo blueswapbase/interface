@@ -1,5 +1,5 @@
-import { ChainId, SupportedChainsType } from '@uniswap/sdk-core'
 import { Connector } from '@web3-react/types'
+import { ChainId, SupportedChainsType } from 'blueswap-sdk-core'
 import { networkConnection, uniwalletWCV2ConnectConnection, walletConnectV2Connection } from 'connection'
 import { getChainInfo } from 'constants/chainInfo'
 import { isSupportedChain } from 'constants/chains'

@@ -1,7 +1,7 @@
-import { ChainId, Token } from '@uniswap/sdk-core'
 import ERC20_ABI from 'abis/erc20.json'
 import { Erc20Interface } from 'abis/types/Erc20'
 import { Erc20Bytes32Interface } from 'abis/types/Erc20Bytes32'
+import { ChainId, Token } from 'blueswap-sdk-core'
 import { DEFAULT_ERC20_DECIMALS } from 'constants/tokens'
 import { Interface } from 'ethers/lib/utils'
 import { UniswapInterfaceMulticall } from 'types/v3'

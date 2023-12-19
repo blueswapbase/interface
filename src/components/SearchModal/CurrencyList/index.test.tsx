@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
-import { Currency, CurrencyAmount as mockCurrencyAmount, Token as mockToken } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { Currency, CurrencyAmount as mockCurrencyAmount, Token as mockToken } from 'blueswap-sdk-core'
 import { DAI, USDC_MAINNET, WBTC } from 'constants/tokens'
 import * as mockJSBI from 'jsbi'
 import { mocked } from 'test-utils/mocked'

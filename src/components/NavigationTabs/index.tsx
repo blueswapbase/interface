@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { Percent } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
+import { Percent } from 'blueswap-sdk-core'
 import { ReactNode } from 'react'
 import { ArrowLeft } from 'react-feather'
 import { Link, useLocation } from 'react-router-dom'

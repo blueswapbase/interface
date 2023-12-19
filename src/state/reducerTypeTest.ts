@@ -1,5 +1,5 @@
-import { ChainId } from '@uniswap/sdk-core'
 import { TokenList } from '@uniswap/token-lists'
+import { ChainId } from 'blueswap-sdk-core'
 import { ConnectionType } from 'connection/types'
 import { SupportedLocale } from 'constants/locales'
 import multicall from 'lib/state/multicall'
