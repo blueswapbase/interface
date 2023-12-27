@@ -8353,10 +8353,10 @@ blueswap-sdk-core@^4.0.13:
     tiny-invariant "^1.1.0"
     toformat "^2.0.0"
 
-blueswap-smart-order-router@^3.19.4:
-  version "3.19.4"
-  resolved "https://registry.yarnpkg.com/blueswap-smart-order-router/-/blueswap-smart-order-router-3.19.4.tgz#2d718d4180a754f4a35a501cf038f7131423db9e"
-  integrity sha512-q6hpsgZMGhAwjdf/zamUhyqJDSzTEqdOOw24kDDPO03XllEvX6AamS0sr9h1mzzSJaqahSmRmHZpVDplhsysOQ==
+blueswap-smart-order-router@3.19.5:
+  version "3.19.5"
+  resolved "https://registry.yarnpkg.com/blueswap-smart-order-router/-/blueswap-smart-order-router-3.19.5.tgz#cbdf61ecd3c75c48ef79cd188ac6ec2809fa7d7f"
+  integrity sha512-WW3ofqhHYeIeV06rQ4T9AbA2IAoH474eB1KqFeMqyR6BKA/h/I+i8dlTK3sy7p43txILj8xYjfhKRQ76ZKIaJg==
   dependencies:
     "@uniswap/default-token-list" "^11.2.0"
     "@uniswap/permit2-sdk" "^1.2.0"
