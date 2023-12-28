@@ -73,7 +73,7 @@ const RangeText = styled(ThemedText.Caption)`
   font-size: 12px !important;
   word-break: break-word;
   padding: 0.25rem 0.25rem;
-  border-radius: 8px;
+  border-radius: 5px;
 `
 
 const FeeTierText = styled(ThemedText.UtilityBadge)`

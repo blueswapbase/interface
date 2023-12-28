@@ -7,7 +7,7 @@ exports[`SwapSkeleton.tsx renders a skeleton 1`] = `
 }
 
 .c9 {
-  border-radius: 12px;
+  border-radius: 5px;
   height: 40px;
   width: 40px;
   position: relative;
@@ -62,7 +62,7 @@ exports[`SwapSkeleton.tsx renders a skeleton 1`] = `
   justify-content: space-between;
   padding: 8px;
   border: 1px solid #D2D9EE;
-  border-radius: 16px;
+  border-radius: 5px;
   background-color: #FFFFFF;
 }
 
@@ -75,14 +75,14 @@ exports[`SwapSkeleton.tsx renders a skeleton 1`] = `
 
 .c7 {
   background-color: #F5F6FC;
-  border-radius: 16px;
+  border-radius: 5px;
   height: 56px;
   width: 100px;
 }
 
 .c12 {
   background-color: #F5F6FC;
-  border-radius: 16px;
+  border-radius: 5px;
   height: 56px;
   width: 100%;
 }
@@ -120,7 +120,7 @@ exports[`SwapSkeleton.tsx renders a skeleton 1`] = `
   -ms-flex-flow: column;
   flex-flow: column;
   background-color: #F5F6FC;
-  border-radius: 16px;
+  border-radius: 5px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -20,7 +20,7 @@ const ClearButton = styled(ButtonText)`
 const IconWrapper = styled.button`
   align-items: center;
   background-color: transparent;
-  border-radius: 8px;
+  border-radius: 5px;
   border: none;
   color: ${({ theme }) => theme.textPrimary};
   cursor: pointer;

@@ -15,7 +15,7 @@ import { RowBetween } from '../Row'
 const InputPanel = styled.div`
   ${flexColumnNoWrap};
   position: relative;
-  border-radius: 1.25rem;
+  border-radius: 0.3125rem;
   background-color: ${({ theme }) => theme.deprecated_bg1};
   z-index: 1;
   width: 100%;
@@ -25,7 +25,7 @@ const ContainerRow = styled.div<{ error: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1.25rem;
+  border-radius: 0.3125rem;
   border: 1px solid ${({ error, theme }) => (error ? theme.accentFailure : theme.backgroundInteractive)};
   transition: border-color 300ms ${({ error }) => (error ? 'step-end' : 'step-start')},
     color 500ms ${({ error }) => (error ? 'step-end' : 'step-start')};

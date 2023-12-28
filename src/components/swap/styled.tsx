@@ -120,7 +120,7 @@ export const UniswapXOptInLargeContainer = styled.div<{ visible: boolean }>`
 export const SwapMustache = styled.main`
   position: relative;
   background: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 16px;
+  border-radius: 5px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
@@ -135,7 +135,7 @@ export const SwapMustacheShadow = styled.main`
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 16px;
+  border5px;
   height: 100%;
   width: 100%;
   transform: translateY(-100%);
@@ -144,7 +144,7 @@ export const SwapMustacheShadow = styled.main`
 `
 
 export const ArrowWrapper = styled.div<{ clickable: boolean }>`
-  border-radius: 12px;
+  border-radius: 5px;
   height: 40px;
   width: 40px;
   position: relative;
@@ -214,7 +214,7 @@ const SwapCallbackErrorInnerAlertTriangle = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 12px;
-  border-radius: 12px;
+  border-radius: 5px;
   min-width: 48px;
   height: 48px;
 `
@@ -234,6 +234,6 @@ export const SwapShowAcceptChanges = styled(AutoColumn)`
   background-color: ${({ theme }) => transparentize(0.95, theme.deprecated_primary3)};
   color: ${({ theme }) => theme.accentAction};
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 5px;
   margin-top: 8px;
 `

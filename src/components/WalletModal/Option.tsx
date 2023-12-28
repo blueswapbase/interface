@@ -44,7 +44,7 @@ const IconWrapper = styled.div`
   justify-content: center;
   img {
     ${({ theme }) => !theme.darkMode && `border: 1px solid ${theme.backgroundOutline}`};
-    border-radius: 12px;
+    border-radius: 5px;
   }
   & > img,
   span {

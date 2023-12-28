@@ -6,7 +6,7 @@ const Wrapper = styled.button<{ isActive?: boolean; activeElement?: boolean }>`
   align-items: center;
   background: ${({ isActive, theme }) => (isActive ? theme.accentActionSoft : 'transparent')};
   border: ${({ theme, isActive }) => (isActive ? '1px solid transparent' : `1px solid ${theme.backgroundOutline}`)};
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
   display: flex;
   outline: none;

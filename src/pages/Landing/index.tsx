@@ -82,7 +82,7 @@ const Glow = styled.div`
   bottom: 0;
   background: radial-gradient(72.04% 72.04% at 50% 3.99%, #ff37eb 0%, rgba(166, 151, 255, 0) 100%);
   filter: blur(72px);
-  border-radius: 24px;
+  border-radius: 5px;
   max-width: 480px;
   width: 100%;
   height: 100%;
@@ -158,7 +158,7 @@ const SubTextContainer = styled.div`
 
 const LandingButton = styled(BaseButton)`
   padding: 16px 0px;
-  border-radius: 24px;
+  border-radius: 5px;
 `
 
 const ButtonCTA = styled(LandingButton)`

@@ -39,7 +39,7 @@ const BagContainer = styled.div<{ raiseZIndex: boolean; isProfilePage: boolean }
   height: calc(100vh - 108px);
   background: ${({ theme }) => theme.backgroundSurface};
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: ${({ theme }) => theme.shallowShadow};
   z-index: ${({ raiseZIndex, isProfilePage }) =>
     raiseZIndex ? (isProfilePage ? Z_INDEX.modalOverTooltip : Z_INDEX.modalBackdrop - 1) : 3};
@@ -71,7 +71,7 @@ const ContinueButton = styled.div`
   color: ${({ theme }) => theme.accentTextLightPrimary};
   margin: 32px 28px 16px;
   padding: 10px 0px;
-  border-radius: 12px;
+  border-radius: 5px;
   text-align: center;
   font-size: 16px;
   font-weight: 600;

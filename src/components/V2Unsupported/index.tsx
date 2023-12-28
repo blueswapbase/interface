@@ -6,7 +6,7 @@ import { ThemedText } from 'theme'
 const TextWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.textPrimary};
   padding: 16px 12px;
-  border-radius: 12px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;

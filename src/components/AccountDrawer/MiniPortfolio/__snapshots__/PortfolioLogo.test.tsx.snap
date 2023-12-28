@@ -22,7 +22,7 @@ exports[`PortfolioLogo renders with L2 icon 1`] = `
 }
 
 .c1 img:nth-child(1) {
-  border-radius: 20px 0 0 20px;
+  border-radius: 5px 0 0 5 px;
   object-position: 0 0;
 }
 
@@ -122,7 +122,7 @@ exports[`PortfolioLogo renders without L2 icon 1`] = `
 }
 
 .c1 img:nth-child(1) {
-  border-radius: 20px 0 0 20px;
+  border-radius: 5px 0 0 5 px;
   object-position: 0 0;
 }
 

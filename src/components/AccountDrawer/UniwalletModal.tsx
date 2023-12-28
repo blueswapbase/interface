@@ -28,7 +28,7 @@ const HeaderRow = styled(RowBetween)`
 `
 const QRCodeWrapper = styled(RowBetween)`
   aspect-ratio: 1;
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: ${({ theme }) => theme.white};
   margin: 24px 32px 20px;
   padding: 10px;

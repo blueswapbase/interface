@@ -89,7 +89,7 @@ const DetailBubble = styled(LoadingBubble)`
 `
 const SquaredBubble = styled(DetailBubble)`
   height: 32px;
-  border-radius: 8px;
+  border-radius: 5px;
 `
 const TokenLogoBubble = styled(DetailBubble)`
   width: 32px;

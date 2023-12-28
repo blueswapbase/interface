@@ -26,7 +26,7 @@ export const ScrollBarStyles = css<{ $isHorizontalScroll?: boolean }>`
 
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.backgroundOutline};
-    border-radius: 8px;
+    border-radius: 5px;
   }
 `
 

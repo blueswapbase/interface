@@ -77,7 +77,7 @@ const PoolMenuItem = styled.div`
   font-weight: 500;
 `
 const MoreOptionsButton = styled(ButtonGray)`
-  border-radius: 12px;
+  border-radius: 5px;
   flex: 1 1 auto;
   padding: 6px 8px;
   width: 100%;
@@ -115,7 +115,7 @@ const InboxIcon = styled(Inbox)`
 `
 
 const ResponsiveButtonPrimary = styled(ButtonPrimary)`
-  border-radius: 12px;
+  border-radius: 5px;
   font-size: 16px;
   padding: 6px 8px;
   width: fit-content;
@@ -129,7 +129,7 @@ const MainContentWrapper = styled.main`
   background-color: ${({ theme }) => theme.backgroundSurface};
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   padding: 0;
-  border-radius: 16px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),

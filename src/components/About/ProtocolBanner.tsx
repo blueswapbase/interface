@@ -10,7 +10,7 @@ const DARK_MODE_GRADIENT = 'radial-gradient(101.8% 4091.31% at 0% 0%, #4673FA 0%
 const Banner = styled.div<{ isDarkMode: boolean }>`
   height: 340px;
   width: 100%;
-  border-radius: 32px;
+  border-radius: 5px;
   max-width: 1440px;
   margin: 80px 0;
 

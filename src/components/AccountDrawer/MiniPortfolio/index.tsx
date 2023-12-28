@@ -53,7 +53,7 @@ const NavItem = styled(ThemedText.SubHeader)<{ active?: boolean }>`
 `
 
 const PageWrapper = styled.div`
-  border-radius: 12px;
+  border-radius: 5px;
   margin-right: -16px;
   margin-left: -16px;
   width: calc(100% + 32px);

@@ -16,7 +16,7 @@ const StyledListingButton = styled(BaseButton)<{ showResolveIssues: boolean; mis
   font-size: 20px;
   line-height: 24px;
   padding: 16px;
-  border-radius: 12px;
+  border-radius: 5px;
   width: min-content;
   border: none;
   cursor: ${({ missingPrices }) => (missingPrices ? 'auto' : 'pointer')};

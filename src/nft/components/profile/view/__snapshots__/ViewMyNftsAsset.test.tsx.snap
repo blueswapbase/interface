@@ -55,8 +55,8 @@ exports[`NftCard renders correctly 1`] = `
 
 .c4 {
   overflow: hidden;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .c6 {
@@ -108,7 +108,7 @@ exports[`NftCard renders correctly 1`] = `
   -webkit-transition: 250ms ease bottom,250ms ease visibility;
   transition: 250ms ease bottom,250ms ease visibility;
   will-change: transform;
-  border-radius: 8px;
+  border-radius: 5px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -140,7 +140,7 @@ exports[`NftCard renders correctly 1`] = `
 
 .c0 {
   position: relative;
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: #FFFFFF;
   overflow: hidden;
   box-shadow: 0px 0px 8px rgba(51,53,72,0.04),1px 2px 4px rgba(51,53,72,0.12);
@@ -157,7 +157,7 @@ exports[`NftCard renders correctly 1`] = `
   bottom: 0px;
   left: 0px;
   border: 1px solid;
-  border-radius: 12px;
+  border-radius: 5px;
   border-color: #D2D9EE;
   pointer-events: none;
   -webkit-transition: 250ms ease border;

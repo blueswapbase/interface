@@ -52,8 +52,8 @@ const Footer = styled.div`
   flex-direction: column;
   margin: 0px 16px 8px;
   padding: 12px 0px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 `
 
 const FooterHeader = styled(Column)`
@@ -109,7 +109,7 @@ const ActionButton = styled.button<{ $backgroundColor: string; $color: string }>
   gap: 16px;
   justify-content: center;
   border: none;
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 12px 0px;
   cursor: pointer;
   align-items: center;

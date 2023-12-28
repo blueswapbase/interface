@@ -33,7 +33,7 @@ export const CollectionBannerLoading = styled(LoadingBubble)`
   border-radius: 0px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoint.sm}px) {
-    border-radius: 16px;
+    border-radius: 5px;
   }
 `
 
@@ -71,7 +71,7 @@ const Banner = styled.div<{ src: string }>`
   background-size: cover;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoint.sm}px) {
-    border-radius: 16px;
+    border-radius: 5px;
   }
 `
 
@@ -109,7 +109,7 @@ const CollectionDisplaySection = styled(Row)`
 
 const IconWrapper = styled.button`
   background-color: transparent;
-  border-radius: 8px;
+  border-radius: 5px;
   border: none;
   color: ${({ theme }) => theme.textPrimary};
   cursor: pointer;

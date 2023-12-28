@@ -26,7 +26,7 @@ const Wrapper = styled.div`
 const OptionGrid = styled.div`
   display: grid;
   grid-gap: 2px;
-  border-radius: 12px;
+  border-radius: 5px;
   overflow: hidden;
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToMedium`
     grid-template-columns: 1fr;

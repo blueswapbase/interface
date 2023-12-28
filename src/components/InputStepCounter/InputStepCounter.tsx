@@ -29,7 +29,7 @@ const InputRow = styled.div`
 `
 
 const SmallButton = styled(ButtonGray)`
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 4px;
 `
 

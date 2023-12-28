@@ -33,7 +33,7 @@ const InternalLinkMenuItem = styled(InternalMenuItem)<{ disabled?: boolean }>`
   justify-content: space-between;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 5px;
 
   :hover {
     background-color: ${({ theme }) => theme.hoverState};
@@ -54,7 +54,7 @@ const MenuTimeFlyout = styled.span`
   background-color: ${({ theme }) => theme.backgroundSurface};
   box-shadow: ${({ theme }) => theme.deepShadow};
   border: 0.5px solid ${({ theme }) => theme.backgroundOutline};
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 8px;
   display: flex;
   flex-direction: column;

@@ -30,7 +30,7 @@ const ListModalWrapper = styled.div`
   width: 420px;
   z-index: ${Z_INDEX.modal};
   background: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 20px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   box-shadow: ${({ theme }) => theme.deepShadow};
   padding: 20px 24px 24px;

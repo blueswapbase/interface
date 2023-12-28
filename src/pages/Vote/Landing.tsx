@@ -53,7 +53,7 @@ const Proposal = styled(Button)`
   padding: 0.75rem 1rem;
   width: 100%;
   margin-top: 1rem;
-  border-radius: 12px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,7 +107,7 @@ const TextButton = styled(ThemedText.DeprecatedMain)`
 
 const AddressButton = styled.div`
   padding: 2px 4px;
-  border-radius: 8px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;

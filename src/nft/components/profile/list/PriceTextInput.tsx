@@ -26,7 +26,7 @@ const InputWrapper = styled(Row)<{ borderColor: string }>`
   color: ${({ theme }) => theme.textTertiary};
   padding: 12px;
   border: 2px solid;
-  border-radius: 8px;
+  border-radius: 5px;
   border-color: ${({ borderColor }) => borderColor};
   margin-right: auto;
   box-sizing: border-box;

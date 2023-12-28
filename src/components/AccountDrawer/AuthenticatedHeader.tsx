@@ -44,7 +44,7 @@ const AuthenticatedHeaderWrapper = styled.div`
 
 const HeaderButton = styled(ThemeButton)`
   border-color: transparent;
-  border-radius: 12px;
+  border-radius: 5px;
   border-style: solid;
   border-width: 1px;
   height: 40px;
@@ -52,7 +52,7 @@ const HeaderButton = styled(ThemeButton)`
 `
 
 const WalletButton = styled(ThemeButton)`
-  border-radius: 12px;
+  border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 4px;
@@ -61,7 +61,7 @@ const WalletButton = styled(ThemeButton)`
 `
 
 const UNIButton = styled(WalletButton)`
-  border-radius: 12px;
+  border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 4px;

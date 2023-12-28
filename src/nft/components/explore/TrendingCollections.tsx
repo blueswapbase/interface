@@ -53,13 +53,13 @@ const FiltersRow = styled.div`
 const Filter = styled.div`
   display: flex;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 4px;
 `
 
 const Selector = styled.div<{ active: boolean }>`
   padding: 8px 12px;
-  border-radius: 12px;
+  border-radius: 5px;
   background: ${({ active, theme }) => (active ? theme.backgroundInteractive : 'none')};
   cursor: pointer;
 

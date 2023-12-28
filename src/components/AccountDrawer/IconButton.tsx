@@ -10,7 +10,7 @@ export const IconHoverText = styled.span`
   color: ${({ theme }) => theme.textPrimary};
   position: absolute;
   top: 28px;
-  border-radius: 8px;
+  border-radius: 5px;
   transform: translateX(-50%);
   opacity: 0;
   font-size: 12px;
@@ -24,7 +24,7 @@ const getWidthTransition = ({ theme }: { theme: DefaultTheme }) =>
 const IconStyles = css<{ hideHorizontal?: boolean }>`
   background-color: ${({ theme }) => theme.backgroundInteractive};
   transition: ${getWidthTransition};
-  border-radius: 12px;
+  border-radius: 5px;
   display: flex;
   padding: 0;
   cursor: pointer;

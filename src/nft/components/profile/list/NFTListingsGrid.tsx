@@ -136,7 +136,7 @@ const UserReceivesHeader = styled.div`
 const RowDivider = styled.hr`
   height: 0px;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 5px;
   border-width: 0.5px;
   border-style: solid;
   margin: 0;

@@ -6,7 +6,7 @@ export const ToggleWrapper = styled.button<{ width?: string }>`
   width: ${({ width }) => width ?? '100%'};
   padding: 1px;
   background: ${({ theme }) => theme.deprecated_bg1};
-  border-radius: 8px;
+  border-radius: 5px;
   border: ${({ theme }) => '1px solid ' + theme.backgroundInteractive};
   cursor: pointer;
   outline: none;

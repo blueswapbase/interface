@@ -17,7 +17,7 @@ const SweepContainer = styled.div`
   gap: 60px;
   margin-top: 12px;
   padding: 16px;
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: ${({ theme }) => theme.backgroundSurface};
   justify-content: space-between;
   background: linear-gradient(${({ theme }) => theme.backgroundSurface}, ${({ theme }) => theme.backgroundSurface})
@@ -69,7 +69,7 @@ const InputContainer = styled.input`
   color: ${({ theme }) => theme.textPrimary};
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   background: none;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 6px 8px;
   font-size: 16px;
   font-weight: 400px;
@@ -90,7 +90,7 @@ const ToggleContainer = styled.div`
   display: flex;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   background: none;
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 4px;
   cursor: pointer;
 `
@@ -98,7 +98,7 @@ const ToggleContainer = styled.div`
 const ToggleSwitch = styled.div<{ active: boolean }>`
   color: ${({ theme, active }) => (active ? theme.textPrimary : theme.textSecondary)};
   padding: 4px 8px;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: ${({ theme, active }) => (active ? theme.backgroundInteractive : `none`)};
   font-size: 14px;
   font-weight: 600;

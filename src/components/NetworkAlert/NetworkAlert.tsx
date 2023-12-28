@@ -104,7 +104,7 @@ const BG_COLORS_BY_DARK_MODE_AND_CHAIN_ID: {
 
 const ContentWrapper = styled.div<{ chainId: NetworkAlertChains; darkMode: boolean; logoUrl: string }>`
   background: ${({ chainId, darkMode }) => BG_COLORS_BY_DARK_MODE_AND_CHAIN_ID[darkMode ? 'dark' : 'light'][chainId]};
-  border-radius: 20px;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -132,7 +132,7 @@ const Header = styled.h2`
 
 const LinkOutToBridge = styled(ExternalLink)`
   align-items: center;
-  border-radius: 8px;
+  border-radius: 5px;
   color: white;
   display: flex;
   font-size: 16px;

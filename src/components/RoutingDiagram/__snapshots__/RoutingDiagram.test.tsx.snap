@@ -133,7 +133,7 @@ exports[`renders multi route 1`] = `
 
 .c8 {
   background-color: #E8ECFB;
-  border-radius: 8px;
+  border-radius: 5px;
   display: grid;
   font-size: 12px;
   grid-gap: 4px;
@@ -389,7 +389,7 @@ exports[`renders single route 1`] = `
 
 .c8 {
   background-color: #E8ECFB;
-  border-radius: 8px;
+  border-radius: 5px;
   display: grid;
   font-size: 12px;
   grid-gap: 4px;

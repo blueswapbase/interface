@@ -9,7 +9,7 @@ const Label = styled.div<{ color: string; backgroundColor: string }>`
   padding: 4px 4px;
   font-size: 12px;
   background-color: ${({ backgroundColor }) => backgroundColor};
-  border-radius: 8px;
+  border-radius: 5px;
   color: ${({ color }) => color};
   display: inline-flex;
   align-items: center;

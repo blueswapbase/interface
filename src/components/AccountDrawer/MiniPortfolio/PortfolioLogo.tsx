@@ -27,7 +27,7 @@ const DoubleLogoContainer = styled.div`
     object-fit: cover;
   }
   img:nth-child(1) {
-    border-radius: 20px 0 0 20px;
+    border-radius: 5px 0 0 5 px;
     object-position: 0 0;
   }
   img:nth-child(2) {
@@ -43,7 +43,7 @@ const StyledLogoParentContainer = styled.div`
 `
 
 const ENSAvatarImg = styled.img`
-  border-radius: 8px;
+  border-radius: 5px;
   height: 40px;
   width: 40px;
 `

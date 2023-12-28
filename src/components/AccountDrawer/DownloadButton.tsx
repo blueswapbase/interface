@@ -15,7 +15,7 @@ const StyledButton = styled.button<{ padded?: boolean; branded?: boolean }>`
   border: none;
   white-space: nowrap;
   background: ${({ theme, branded }) => (branded ? theme.promotionalGradient : theme.backgroundInteractive)};
-  border-radius: 12px;
+  border-radius: 5px;
 
   font-weight: 600;
   font-size: 14px;

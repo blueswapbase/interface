@@ -10,7 +10,7 @@ export const LoadingBubble = styled.div<{
   delay?: string
   margin?: string
 }>`
-  border-radius: 12px;
+  border-radius: 5px;
   border-radius: ${({ round }) => (round ? '50%' : '12px')};
   ${({ margin }) => margin && `margin: ${margin}`};
   height: ${({ height }) => height ?? '24px'};

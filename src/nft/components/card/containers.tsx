@@ -46,7 +46,7 @@ const StyledActionButton = styled(ThemedText.BodySmall)<{
   transition: ${({ theme }) =>
     `${theme.transition.duration.medium} ${theme.transition.timing.ease} bottom, ${theme.transition.duration.medium} ${theme.transition.timing.ease} visibility`};
   will-change: transform;
-  border-radius: 8px;
+  border-radius: 5px;
   justify-content: center;
   font-weight: 600 !important;
   line-height: 16px;

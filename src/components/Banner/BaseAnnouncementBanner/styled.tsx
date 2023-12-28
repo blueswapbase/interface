@@ -31,7 +31,7 @@ export const PopupContainer = styled.div<{ show: boolean }>`
 
   padding: 24px 16px 16px;
 
-  border-radius: 20px;
+  border-radius: 5px;
   bottom: 20px;
   right: 20px;
   width: 390px;
@@ -78,7 +78,7 @@ export const StyledXButton = styled(X)`
 
 export const BannerButton = styled(BaseButton)`
   height: 40px;
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 10px;
   ${OpacityHoverState};
 `

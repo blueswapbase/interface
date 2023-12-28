@@ -23,8 +23,8 @@ const DetailsFooter = styled.div<{ show: boolean }>`
   margin-top: -2rem;
   width: 100%;
   max-width: 400px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   color: ${({ theme }) => theme.textSecondary};
   background-color: ${({ theme }) => theme.deprecated_advancedBG};
   z-index: ${Z_INDEX.deprecated_zero};

@@ -118,7 +118,7 @@ const ContentNotAvailable = styled.div`
   line-height: 20px;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 5px;
   width: 450px;
   height: 450px;
 `
@@ -131,7 +131,7 @@ const FilterBox = styled.div<{ backgroundColor: string }>`
   line-height: 14px;
   color: ${({ theme }) => theme.textPrimary};
   padding: 8px 16px;
-  border-radius: 12px;
+  border-radius: 5px;
   cursor: pointer;
   box-sizing: border-box;
   ${OpacityHoverState};

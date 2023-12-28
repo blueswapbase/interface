@@ -19,7 +19,7 @@ const ProposalTitle = memo(styled(TextInput)`
 const ProposalEditorContainer = styled.div`
   margin-top: 10px;
   padding: 0.75rem 1rem 0.75rem 1rem;
-  border-radius: 20px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.backgroundInteractive};
   background-color: ${({ theme }) => theme.deprecated_bg1};
 `

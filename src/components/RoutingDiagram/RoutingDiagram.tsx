@@ -56,7 +56,7 @@ const DotColor = styled(DotLine)`
 
 const OpaqueBadge = styled(Badge)`
   background-color: ${({ theme }) => theme.backgroundInteractive};
-  border-radius: 8px;
+  border-radius: 5px;
   display: grid;
   font-size: 12px;
   grid-gap: 4px;

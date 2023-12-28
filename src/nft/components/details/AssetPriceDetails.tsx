@@ -33,7 +33,7 @@ interface AssetPriceDetailsProps {
 
 const hoverState = css`
   :hover::after {
-    border-radius: 12px;
+    border-radius: 5px;
     content: '';
     position: absolute;
     top: 0;
@@ -45,7 +45,7 @@ const hoverState = css`
   }
 
   :active::after {
-    border-radius: 12px;
+    border-radius: 5px;
     content: '';
     position: absolute;
     top: 0;
@@ -96,7 +96,7 @@ const BuyNowButton = styled.div<{ assetInBag: boolean; margin: boolean; useAccen
   width: 100%;
   background-color: ${({ theme, assetInBag, useAccentColor }) =>
     assetInBag ? theme.accentFailure : useAccentColor ? theme.accentAction : theme.backgroundInteractive};
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 10px 12px;
   margin-top: ${({ margin }) => (margin ? '12px' : '0px')};
   text-align: center;

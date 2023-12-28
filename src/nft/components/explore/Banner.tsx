@@ -146,10 +146,7 @@ const Banner = () => {
         )
       ) : null}
       <BannerMainArea>
-        <HeaderContainer>
-          Better prices. <br />
-          More listings.
-        </HeaderContainer>
+        <HeaderContainer>blueswap NFTs</HeaderContainer>
         {collections ? (
           <Carousel activeIndex={activeCollectionIdx} toggleNextSlide={onToggleNextSlide}>
             {collections.map((collection) => (

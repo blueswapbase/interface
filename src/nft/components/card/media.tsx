@@ -31,8 +31,8 @@ interface ImageProps {
 
 const StyledMediaContainer = styled(Row)`
   overflow: hidden;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 `
 
 export const StyledImage = styled.img<{

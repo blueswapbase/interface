@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   border-bottom: none;
   background-color: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 5px 20px 0px 0px;
   bottom: 52px;
   color: ${({ theme }) => theme.textSecondary};
   display: flex;
@@ -68,7 +68,7 @@ const FiatValue = styled.span`
 const SwapButton = styled(StyledInternalLink)`
   background-color: ${({ theme }) => theme.accentAction};
   border: none;
-  border-radius: 12px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.accentTextLightPrimary};
   display: flex;
   flex: 1 1 auto;

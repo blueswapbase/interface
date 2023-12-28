@@ -248,7 +248,7 @@ const CopiedTooltip = styled.div<{ isCopyContractTooltip?: boolean }>`
   line-height: ${({ isCopyContractTooltip }) => !isCopyContractTooltip && '32px'};
 
   padding: ${({ isCopyContractTooltip }) => isCopyContractTooltip && '8px'};
-  border-radius: 8px;
+  border-radius: 5px;
 
   color: ${({ theme }) => theme.white};
   font-size: 12px;
@@ -517,7 +517,7 @@ export const Separator = styled.div`
 `
 
 export const GlowEffect = styled.div`
-  border-radius: 32px;
+  border-radius: 5px;
   box-shadow: ${({ theme }) => theme.networkDefaultShadow};
 `
 

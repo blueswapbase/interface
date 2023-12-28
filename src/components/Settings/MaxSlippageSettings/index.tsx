@@ -21,7 +21,7 @@ const Option = styled(Row)<{ isActive: boolean }>`
   padding: 6px 12px;
   text-align: center;
   gap: 4px;
-  border-radius: 12px;
+  border-radius: 5px;
   background: ${({ isActive, theme }) => (isActive ? theme.backgroundInteractive : 'transparent')};
   pointer-events: ${({ isActive }) => isActive && 'none'};
 `

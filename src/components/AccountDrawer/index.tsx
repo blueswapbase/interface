@@ -81,7 +81,7 @@ const AccountDrawerScrollWrapper = styled.div`
 
   scrollbar-gutter: stable;
   overscroll-behavior: contain;
-  border-radius: 12px;
+  border-radius: 5px;
 `
 
 const Container = styled.div`
@@ -126,7 +126,7 @@ const AccountDrawerWrapper = styled.div<{ open: boolean }>`
     width: ${DRAWER_WIDTH_XL};
   }
 
-  border-radius: 12px;
+  border-radius: 5px;
   width: ${DRAWER_WIDTH};
   font-size: 16px;
   background-color: ${({ theme }) => theme.backgroundSurface};
@@ -146,7 +146,7 @@ const CloseDrawer = styled.div`
   height: 100%;
   // When the drawer is not hovered, the icon should be 18px from the edge of the sidebar.
   padding: 24px calc(18px + ${DRAWER_OFFSET}) 24px 14px;
-  border-radius: 20px 0 0 20px;
+  border-radius: 5px 0 0 5 px;
   transition: ${({ theme }) =>
     `${theme.transition.duration.medium} ${theme.transition.timing.ease} background-color, ${theme.transition.duration.medium} ${theme.transition.timing.ease} margin`};
   &:hover {

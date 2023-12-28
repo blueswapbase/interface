@@ -14,7 +14,7 @@ const ExpandIcon = styled(ChevronDown)<{ $expanded: boolean }>`
 
 const ToggleButton = styled(Row)`
   background-color: ${({ theme }) => theme.backgroundInteractive};
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 4px 8px 4px 12px;
   height: 100%;
   width: fit-content;

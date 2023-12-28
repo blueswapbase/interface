@@ -23,7 +23,7 @@ const InputWrapper = styled(Row)<{ isInvalid: boolean }>`
   border: 1px solid;
   position: relative;
   height: 44px;
-  border-radius: 8px;
+  border-radius: 5px;
   border-color: ${({ isInvalid, theme }) => (isInvalid ? theme.accentCritical : theme.backgroundOutline)};
   width: 160px;
   justify-content: space-between;
@@ -36,7 +36,7 @@ const DropdownPrompt = styled(Row)`
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 6px 4px 6px 8px;
   white-space: nowrap;
   color: ${({ theme }) => theme.textPrimary};

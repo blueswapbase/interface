@@ -100,7 +100,7 @@ export const SmallButtonPrimary = styled(ButtonPrimary)`
   font-size: 16px;
   padding: ${({ padding }) => padding ?? '8px 12px'};
 
-  border-radius: 12px;
+  border-radius: 5px;
 `
 
 const BaseButtonLight = styled(BaseButton)`
@@ -164,7 +164,7 @@ export const ButtonSecondary = styled(BaseButton)`
   color: ${({ theme }) => theme.accentAction};
   background-color: transparent;
   font-size: 16px;
-  border-radius: 12px;
+  border-radius: 5px;
   padding: ${({ padding }) => (padding ? padding : '10px')};
 
   &:focus {

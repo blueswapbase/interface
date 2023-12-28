@@ -31,7 +31,7 @@ const InternalMenuItem = styled.div`
   flex: 1;
   padding: 8px;
   color: ${({ theme }) => theme.textPrimary};
-  border-radius: 8px;
+  border-radius: 5px;
 
   :hover {
     cursor: pointer;
@@ -59,7 +59,7 @@ const MenuTimeFlyout = styled.span`
   background-color: ${({ theme }) => theme.backgroundSurface};
   box-shadow: ${({ theme }) => theme.deepShadow};
   border: 0.5px solid ${({ theme }) => theme.backgroundOutline};
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 8px;
   display: flex;
   flex-direction: column;

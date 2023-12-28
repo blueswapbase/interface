@@ -277,7 +277,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   color: #0D111C;
   padding: 24px;
   height: 212px;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 1px solid transparent;
   box-shadow: 0px 10px 24px 0px rgba(51,53,72,0.04);
   -webkit-transition: 250ms ease border;
@@ -310,7 +310,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   color: #0D111C;
   padding: 24px;
   height: 212px;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 1px solid #D2D9EE;
   box-shadow: 0px 10px 24px 0px rgba(51,53,72,0.04);
   -webkit-transition: 250ms ease border;
@@ -411,7 +411,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   width: 100%;
   font-weight: 500;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
   color: #0D111C;
@@ -467,7 +467,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   width: 100%;
   font-weight: 500;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
   color: #0D111C;
@@ -523,7 +523,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   width: 200px;
   font-weight: 500;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
   color: #0D111C;
@@ -670,7 +670,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
 .c73 {
   height: 340px;
   width: 100%;
-  border-radius: 32px;
+  border-radius: 5px;
   max-width: 1440px;
   margin: 80px 0;
   display: -webkit-box;
@@ -842,7 +842,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   position: relative;
-  border-radius: 20px;
+  border-radius: 5px;
   z-index: 1;
   width: initial;
   -webkit-transition: height 1s ease;
@@ -852,7 +852,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
 
 .c19 {
   min-height: 44px;
-  border-radius: 20px;
+  border-radius: 5px;
   width: initial;
 }
 
@@ -867,7 +867,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   color: #0D111C;
   cursor: pointer;
   height: unset;
-  border-radius: 16px;
+  border-radius: 5px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -922,7 +922,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   color: #FFFFFF;
   cursor: pointer;
   height: unset;
-  border-radius: 16px;
+  border-radius: 5px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1080,7 +1080,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
 .c4 {
   position: relative;
   background: #FFFFFF;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 1px solid #D2D9EE;
   padding: 8px;
   padding-top: 12px;
@@ -1095,7 +1095,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
 }
 
 .c37 {
-  border-radius: 12px;
+  border-radius: 5px;
   height: 40px;
   width: 40px;
   position: relative;
@@ -1138,7 +1138,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
 
 .c15 {
   padding: 6px 12px;
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .c13 {
@@ -1174,7 +1174,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
 
 .c17 {
   background-color: #F5F6FC;
-  border-radius: 16px;
+  border-radius: 5px;
   color: #7780A0;
   font-size: 14px;
   font-weight: 500;
@@ -1285,7 +1285,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   background: radial-gradient(72.04% 72.04% at 50% 3.99%,#ff37eb 0%,rgba(166,151,255,0) 100%);
   -webkit-filter: blur(72px);
   filter: blur(72px);
-  border-radius: 24px;
+  border-radius: 5px;
   max-width: 480px;
   width: 100%;
   height: 100%;
@@ -1358,7 +1358,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
 
 .c56 {
   padding: 16px 0px;
-  border-radius: 24px;
+  border-radius: 5px;
 }
 
 .c57 {
@@ -2806,7 +2806,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   color: #0D111C;
   padding: 24px;
   height: 212px;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 1px solid transparent;
   box-shadow: 0px 10px 24px 0px rgba(51,53,72,0.04);
   -webkit-transition: 250ms ease border;
@@ -2839,7 +2839,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   color: #0D111C;
   padding: 24px;
   height: 212px;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 1px solid transparent;
   box-shadow: 0px 10px 24px 0px rgba(51,53,72,0.04);
   -webkit-transition: 250ms ease border;
@@ -2872,7 +2872,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   color: #0D111C;
   padding: 24px;
   height: 212px;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 1px solid #D2D9EE;
   box-shadow: 0px 10px 24px 0px rgba(51,53,72,0.04);
   -webkit-transition: 250ms ease border;
@@ -2973,7 +2973,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   width: 100%;
   font-weight: 500;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
   color: #0D111C;
@@ -3029,7 +3029,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   width: 100%;
   font-weight: 500;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
   color: #0D111C;
@@ -3085,7 +3085,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   width: 200px;
   font-weight: 500;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
   color: #0D111C;
@@ -3232,7 +3232,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
 .c74 {
   height: 340px;
   width: 100%;
-  border-radius: 32px;
+  border-radius: 5px;
   max-width: 1440px;
   margin: 80px 0;
   display: -webkit-box;
@@ -3404,7 +3404,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   position: relative;
-  border-radius: 20px;
+  border-radius: 5px;
   z-index: 1;
   width: initial;
   -webkit-transition: height 1s ease;
@@ -3414,7 +3414,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
 
 .c19 {
   min-height: 44px;
-  border-radius: 20px;
+  border-radius: 5px;
   width: initial;
 }
 
@@ -3429,7 +3429,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   color: #0D111C;
   cursor: pointer;
   height: unset;
-  border-radius: 16px;
+  border-radius: 5px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3484,7 +3484,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   color: #FFFFFF;
   cursor: pointer;
   height: unset;
-  border-radius: 16px;
+  border-radius: 5px;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3642,7 +3642,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
 .c4 {
   position: relative;
   background: #FFFFFF;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 1px solid #D2D9EE;
   padding: 8px;
   padding-top: 12px;
@@ -3657,7 +3657,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
 }
 
 .c37 {
-  border-radius: 12px;
+  border-radius: 5px;
   height: 40px;
   width: 40px;
   position: relative;
@@ -3700,7 +3700,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
 
 .c15 {
   padding: 6px 12px;
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .c13 {
@@ -3736,7 +3736,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
 
 .c17 {
   background-color: #F5F6FC;
-  border-radius: 16px;
+  border-radius: 5px;
   color: #7780A0;
   font-size: 14px;
   font-weight: 500;
@@ -3847,7 +3847,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   background: radial-gradient(72.04% 72.04% at 50% 3.99%,#ff37eb 0%,rgba(166,151,255,0) 100%);
   -webkit-filter: blur(72px);
   filter: blur(72px);
-  border-radius: 24px;
+  border-radius: 5px;
   max-width: 480px;
   width: 100%;
   height: 100%;
@@ -3920,7 +3920,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
 
 .c56 {
   padding: 16px 0px;
-  border-radius: 24px;
+  border-radius: 5px;
 }
 
 .c57 {

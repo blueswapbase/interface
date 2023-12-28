@@ -32,7 +32,7 @@ const InvalidDetailsText = styled.span`
 const TokenExploreButton = styled(ButtonPrimary)`
   width: fit-content;
   padding: 12px 16px;
-  border-radius: 12px;
+  border-radius: 5px;
 
   color: ${({ theme }) => theme.textPrimary};
   font-size: 16px;

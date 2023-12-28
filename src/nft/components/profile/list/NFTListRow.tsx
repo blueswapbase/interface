@@ -16,7 +16,7 @@ const IMAGE_THUMBNAIL_SIZE = 60
 const NFTListRowWrapper = styled(Row)`
   padding: 24px 0px;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 5px;
 
   &:hover {
     background: ${({ theme }) => theme.backgroundOutline};
@@ -54,7 +54,7 @@ const NFTInfoWrapper = styled(Row)`
 const NFTImage = styled.img`
   width: ${IMAGE_THUMBNAIL_SIZE}px;
   height: ${IMAGE_THUMBNAIL_SIZE}px;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-right: 8px;
 `
 

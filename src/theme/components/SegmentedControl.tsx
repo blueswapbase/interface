@@ -15,7 +15,7 @@ const SegmentWrapper = styled(AutoRow)<{ active?: boolean }>`
 
   cursor: pointer;
 
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 6px;
   color: ${({ theme }) => theme.textSecondary};
   gap: 4px;
@@ -52,7 +52,7 @@ export function Segment<T>({ active, value, Icon, onSelect, testId, children }: 
 }
 
 const SegmentedControlWrapper = styled(Row)`
-  border-radius: 16px;
+  border-radius: 5px;
   gap: 4px;
   padding: 4px;
   outline: 1px solid ${({ theme }) => theme.backgroundOutline};

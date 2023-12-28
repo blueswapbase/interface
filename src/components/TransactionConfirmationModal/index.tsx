@@ -24,15 +24,15 @@ import AnimatedConfirmation from './AnimatedConfirmation'
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 20px;
+  border-radius: 5px;
   outline: 1px solid ${({ theme }) => theme.backgroundOutline};
   width: 100%;
   padding: 16px;
 `
 
 const BottomSection = styled(AutoColumn)`
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 `
 
 const ConfirmedIcon = styled(ColumnCenter)<{ inline?: boolean }>`
