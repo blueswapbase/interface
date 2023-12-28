@@ -13,7 +13,7 @@ export const navIcon = style([
     justifyContent: 'center',
     textAlign: 'center',
     cursor: 'pointer',
-    borderRadius: '8',
+    borderRadius: '4',
     transition: '250',
   }),
   {

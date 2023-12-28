@@ -8,8 +8,7 @@ import styled from 'styled-components'
 import { ThemedText } from 'theme'
 import { useIsDarkMode } from 'theme/components/ThemeToggle'
 
-import darkImage from '../../assets/images/404-page-dark.png'
-import lightImage from '../../assets/images/404-page-light.png'
+import logoImage from '../../assets/images/logo.png'
 
 const Image = styled.img`
   max-width: 510px;
@@ -55,7 +54,7 @@ export default function NotFound() {
               <Trans>Page not found!</Trans>
             </Paragraph>
           </Container>
-          <Image src={isDarkMode ? darkImage : lightImage} alt="Liluni" />
+          <Image src={logoImage} alt="Logo" />
         </Header>
         <SmallButtonPrimary as={Link} to="/">
           <Trans>Oops, take me back to Swap</Trans>

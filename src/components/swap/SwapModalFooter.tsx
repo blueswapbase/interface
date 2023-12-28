@@ -194,7 +194,7 @@ export default function SwapModalFooter({
               data-testid="confirm-swap-button"
               onClick={onConfirm}
               disabled={disabledConfirm}
-              $borderRadius="12px"
+              $borderRadius="5px"
               id={InterfaceElementName.CONFIRM_SWAP_BUTTON}
             >
               <ThemedText.HeadlineSmall color="accentTextLightPrimary">

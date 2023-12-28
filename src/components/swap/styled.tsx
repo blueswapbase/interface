@@ -26,16 +26,16 @@ export const PageWrapper = styled.div`
 export const SwapWrapper = styled.main<{ chainId?: number }>`
   position: relative;
   background: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 24px;
-  border: 1px solid ${({ theme }) => theme.backgroundOutline};
+  border-radius: 5px;
+  border: 2px solid ${({ theme }) => theme.backgroundOutline};
   padding: 8px;
   padding-top: 12px;
-  box-shadow: ${({ chainId }) => !!chainId && chainId === ChainId.BNB && '0px 40px 120px 0px #f0b90b29'};
+  //box-shadow: ${({ chainId }) => !!chainId && chainId === ChainId.BNB && '0px 40px 120px 0px #f0b90b29'};
   z-index: ${Z_INDEX.default};
   transition: transform 250ms ease;
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.backgroundOutline};
+    border: spx solid ${({ theme }) => theme.backgroundOutline};
   }
 `
 
@@ -47,7 +47,7 @@ export const UniswapPopoverContainer = styled.div`
   line-height: 16px;
   word-break: break-word;
   background: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 20px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.backgroundInteractive};
   box-shadow: 0 4px 8px 0 ${({ theme }) => transparentize(0.9, theme.shadow1)};
   position: relative;

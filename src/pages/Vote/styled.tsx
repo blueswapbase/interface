@@ -50,7 +50,7 @@ const StyledProposalContainer = styled.span<{ status: ProposalState }>`
   padding: 0.5rem;
   border-radius: 8px;
   color: ${({ status, theme }) => handleColorType(status, theme)};
-  border: 1px solid ${({ status, theme }) => handleColorType(status, theme)};
+  border: 2px solid ${({ status, theme }) => handleColorType(status, theme)};
   width: fit-content;
   justify-self: flex-end;
   text-transform: uppercase;

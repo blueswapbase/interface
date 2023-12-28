@@ -85,8 +85,8 @@ const SwapDetailsWrapper = styled.div`
 `
 
 const Wrapper = styled(Column)`
-  border: 1px solid ${({ theme }) => theme.backgroundOutline};
-  border-radius: 16px;
+  border: 2px solid ${({ theme }) => theme.backgroundOutline};
+  border-radius: 5px;
   padding: 12px 16px;
 `
 
