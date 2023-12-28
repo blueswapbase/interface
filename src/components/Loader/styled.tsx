@@ -27,7 +27,7 @@ export const LoadingRows = styled.div`
 
   & > div {
     ${shimmerMixin}
-    border-radius: 12px;
+    border-radius: 5px;
     height: 2.4em;
   }
 `

@@ -29,7 +29,7 @@ const StyledCard = styled.div<{ $isDarkMode: boolean; $backgroundImgSrc?: string
   color: ${({ theme }) => theme.textPrimary};
   padding: 24px;
   height: 212px;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 1px solid ${({ theme, $type }) => ($type === CardType.Primary ? 'transparent' : theme.backgroundOutline)};
   box-shadow: 0px 10px 24px 0px rgba(51, 53, 72, 0.04);
   transition: ${({ theme }) => `${theme.transition.duration.medium} ${theme.transition.timing.ease} border`};
@@ -74,7 +74,7 @@ const getCardDescriptionColor = (type: CardType, theme: DefaultTheme) => {
 const CardDescription = styled.div<{ type: CardType }>`
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 5px;
   line-height: 20px;
   color: ${({ theme, type }) => getCardDescriptionColor(type, theme)};
   padding: 0 40px 0 0;

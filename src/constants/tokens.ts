@@ -73,13 +73,9 @@ export const PORTAL_USDC_CELO = new Token(
   'USDCet',
   'USDC (Portal from Ethereum)'
 )
-export const USDC_BASE = new Token(
-  ChainId.BASE,
-  '0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA',
-  6,
-  'USD Base Coin',
-  'USDbC'
-)
+export const USDC_BASE = new Token(ChainId.BASE, '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913', 6, 'USD Coin', 'USDC')
+export const BLUE_BASE = new Token(ChainId.BASE, '0x30136B90e532141FeD006c61105cff3668b5c774', 18, 'BlueSwap', 'BLUE')
+export const TOSHI_BASE = new Token(ChainId.BASE, '0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4', 18, 'TOSHI', 'TOSHI')
 
 export const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
 export const DAI_ARBITRUM_ONE = new Token(

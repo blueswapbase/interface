@@ -22,7 +22,7 @@ const StyledMarketplaceContainer = styled.div<{ isText?: boolean }>`
   color: ${({ theme }) => theme.accentTextLightPrimary};
   justify-content: center;
   align-items: center;
-  border-radius: 32px;
+  border-radius: 5px;
   z-index: 2;
 `
 

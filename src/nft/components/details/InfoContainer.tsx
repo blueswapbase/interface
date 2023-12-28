@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 
 const Header = styled.div<{ isOpen: boolean }>`
   display: flex;
-  border-radius: ${({ isOpen }) => (isOpen ? '16px 16px 0px 0px' : '16px')};
+  border-radius: ${({ isOpen }) => (isOpen ? '5px 5px 5px 5px' : '5px')};
   justify-content: space-between;
   background-color: ${({ theme }) => theme.backgroundSurface};
   padding: 14px 20px;

@@ -131,7 +131,7 @@ const Error = styled.div`
   color: ${({ theme }) => theme.accentCritical};
   font-weight: 500;
   line-height: 24px;
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 12px 20px;
   font-size: 14px;
   align-items: center;

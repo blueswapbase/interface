@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { BREAKPOINTS, ThemedText } from 'theme'
 
-const BORDER_RADIUS = '12'
+const BORDER_RADIUS = '5'
 
 const StyledDetailsRelativeContainer = styled.div`
   position: relative;

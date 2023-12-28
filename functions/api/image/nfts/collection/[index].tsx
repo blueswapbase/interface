@@ -64,7 +64,7 @@ export const onRequest: PagesFunction = async ({ params, request }) => {
                 width="500px"
                 height="500px"
                 style={{
-                  borderRadius: '60px',
+                  borderRadius: '5px',
                   objectFit: 'cover',
                 }}
               />

@@ -34,8 +34,8 @@ const PopupContainer = styled.div<{ padded?: boolean }>`
   width: 100%;
   background-color: ${({ theme }) => theme.backgroundSurface};
   position: relative;
-  border: 1px solid ${({ theme }) => theme.backgroundOutline};
-  border-radius: 16px;
+  border: 2px solid ${({ theme }) => theme.backgroundOutline};
+  border-radius: 5px;
   overflow: hidden;
   box-shadow: ${({ theme }) => theme.deepShadow};
   transition: ${({ theme }) => `visibility ${theme.transition.duration.fast} ease-in-out`};

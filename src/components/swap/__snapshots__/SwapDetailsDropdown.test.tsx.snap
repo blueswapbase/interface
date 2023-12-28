@@ -183,7 +183,7 @@ exports[`SwapDetailsDropdown.tsx renders a trade 1`] = `
 
 .c1 {
   border: 1px solid #D2D9EE;
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 12px 16px;
 }
 

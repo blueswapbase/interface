@@ -32,7 +32,7 @@ const Button = styled.button<{ isActive: boolean }>`
 
 const IconContainer = styled(Row)`
   padding: 6px 12px;
-  border-radius: 16px;
+  border-radius: 5px;
 `
 
 const IconContainerWithSlippage = styled(IconContainer)<{ displayWarning?: boolean }>`
