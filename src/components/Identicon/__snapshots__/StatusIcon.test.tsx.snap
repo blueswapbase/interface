@@ -45,7 +45,7 @@ exports[`StatusIcon with account renders children in correct order 1`] = `
   height: 16px;
   bottom: -4px;
   right: -4px;
-  border-radius: 50%;
+  border-radius: 5px;
   outline: 2px solid #FFFFFF;
   outline-offset: -0.1px;
   background-color: #FFFFFF;
@@ -70,7 +70,7 @@ exports[`StatusIcon with account renders children in correct order 1`] = `
   height: 16px;
   bottom: -4px;
   left: -4px;
-  border-radius: 50%;
+  border-radius: 5px;
   outline: 2px solid #FFFFFF;
   outline-offset: -0.1px;
   background-color: #FFFFFF;
@@ -173,7 +173,7 @@ exports[`StatusIcon with no account renders children in correct order 1`] = `
   height: 16px;
   bottom: -4px;
   right: -4px;
-  border-radius: 50%;
+  border-radius: 5px;
   outline: 2px solid #FFFFFF;
   outline-offset: -0.1px;
   background-color: #FFFFFF;
@@ -198,7 +198,7 @@ exports[`StatusIcon with no account renders children in correct order 1`] = `
   height: 16px;
   bottom: -4px;
   left: -4px;
-  border-radius: 50%;
+  border-radius: 5px;
   outline: 2px solid #FFFFFF;
   outline-offset: -0.1px;
   background-color: #FFFFFF;

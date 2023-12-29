@@ -11,7 +11,7 @@ import { formatNumberOrString, NumberType } from 'utils/formatNumbers'
 const CarouselCardBorder = styled.div`
   width: 100%;
   position: relative;
-  border-radius: 21px;
+  border-radius: 5px;
   cursor: pointer;
   border: 1px solid transparent;
   transition-property: border-color;
@@ -30,7 +30,7 @@ const CarouselCardBorder = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 21px;
+    border-radius: 5px;
     z-index: -1;
     box-shadow: ${({ theme }) => theme.deepShadow};
     transition-property: opacity;

@@ -61,7 +61,7 @@ const SquareChainLogo = styled.img`
 const CircleLogoImage = styled.img<{ size: string }>`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
-  border-radius: 50%;
+  border-radius: 5px;
 `
 
 const L2LogoContainer = styled.div<{ hasSquareLogo?: boolean }>`

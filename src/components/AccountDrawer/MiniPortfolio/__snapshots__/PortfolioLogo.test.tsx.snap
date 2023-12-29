@@ -45,12 +45,12 @@ exports[`PortfolioLogo renders with L2 icon 1`] = `
 .c2 {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .c3 {
   background-color: #0D111C;
-  border-radius: 2px;
+  border-radius: 5px;
   height: 16px;
   left: 60%;
   position: absolute;
@@ -140,7 +140,7 @@ exports[`PortfolioLogo renders without L2 icon 1`] = `
 .c2 {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 <div>

@@ -43,7 +43,7 @@ const GlobalPriceIcon = styled.div`
   bottom: 32px;
   right: -10px;
   background-color: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 50%;
+  border-radius: 5px;
   height: 28px;
   width: 28px;
   align-items: center;

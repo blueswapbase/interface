@@ -94,7 +94,7 @@ const SquaredBubble = styled(DetailBubble)`
 const TokenLogoBubble = styled(DetailBubble)`
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 5px;
 `
 const TitleBubble = styled(DetailBubble)`
   width: 136px;

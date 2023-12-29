@@ -1,7 +1,6 @@
 import { ButtonEmpty } from 'components/Button'
 import styled from 'styled-components'
 import { BREAKPOINTS } from 'theme'
-import { useIsDarkMode } from 'theme/components/ThemeToggle'
 
 import meshSrc from './images/Mesh.png'
 
@@ -83,24 +82,3 @@ const BannerButton = styled(ButtonEmpty)`
   color: white;
   border: 1px solid white;
 `
-
-const ProtocolBanner = () => {
-  const isDarkMode = useIsDarkMode()
-  return (
-    <Banner isDarkMode={isDarkMode}>
-      <TextContainer>
-        <HeaderText>Powered by the Uniswap Protocol</HeaderText>
-        <DescriptionText>
-          The leading decentralized crypto trading protocol, governed by a global community.
-        </DescriptionText>
-      </TextContainer>
-      <BannerButtonContainer>
-        <BannerButton width="200px" as="a" href="https://uniswap.org" rel="noopener noreferrer" target="_blank">
-          Learn more
-        </BannerButton>
-      </BannerButtonContainer>
-    </Banner>
-  )
-}
-
-export default ProtocolBanner

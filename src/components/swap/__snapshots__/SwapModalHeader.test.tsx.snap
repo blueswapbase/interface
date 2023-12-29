@@ -84,7 +84,7 @@ exports[`SwapModalHeader.tsx matches base snapshot, test trade exact input 1`] =
   transition: opacity 250ms ease-in;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .c11 {
@@ -94,7 +94,7 @@ exports[`SwapModalHeader.tsx matches base snapshot, test trade exact input 1`] =
   -webkit-transition: background-color 250ms ease-in;
   transition: background-color 250ms ease-in;
   box-shadow: 0 0 1px white;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .c10 {
@@ -318,7 +318,7 @@ exports[`SwapModalHeader.tsx renders ETH input token for an ETH input UniswapX s
   transition: opacity 250ms ease-in;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .c11 {
@@ -328,7 +328,7 @@ exports[`SwapModalHeader.tsx renders ETH input token for an ETH input UniswapX s
   -webkit-transition: background-color 250ms ease-in;
   transition: background-color 250ms ease-in;
   box-shadow: 0 0 1px white;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .c10 {
@@ -552,7 +552,7 @@ exports[`SwapModalHeader.tsx test trade exact output, no recipient 1`] = `
   transition: opacity 250ms ease-in;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .c11 {
@@ -562,7 +562,7 @@ exports[`SwapModalHeader.tsx test trade exact output, no recipient 1`] = `
   -webkit-transition: background-color 250ms ease-in;
   transition: background-color 250ms ease-in;
   box-shadow: 0 0 1px white;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .c10 {

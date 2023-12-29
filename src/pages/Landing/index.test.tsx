@@ -12,7 +12,7 @@ describe('disable nft on landing page', () => {
     const { container } = render(<Landing />)
     expect(container).toMatchSnapshot()
     expect(container).toHaveTextContent('NFTs')
-    expect(container).toHaveTextContent('Trade crypto and NFTs with confidence')
+    expect(container).toHaveTextContent('blueswap')
     expect(container).toHaveTextContent('Buy, sell, and explore tokens and NFTs')
     expect(container).toHaveTextContent('Trade NFTs')
     expect(container).toHaveTextContent('Explore NFTs')

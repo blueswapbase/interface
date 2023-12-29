@@ -75,7 +75,7 @@ const StyledCollectionNameHolder = styled.div`
 const StyledImageHolder = styled(LoadingBubble)`
   width: 36px;
   height: 36px;
-  border-radius: 36px;
+  border-radius: 5px;
 `
 
 const StyledRankHolder = styled(LoadingBubble)`

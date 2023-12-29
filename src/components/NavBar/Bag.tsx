@@ -8,7 +8,7 @@ import { shallow } from 'zustand/shallow'
 
 const CounterDot = styled.div`
   background-color: ${({ theme }) => theme.accentAction};
-  border-radius: 100px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.accentTextLightPrimary};
   font-size: 10px;
   line-height: 12px;

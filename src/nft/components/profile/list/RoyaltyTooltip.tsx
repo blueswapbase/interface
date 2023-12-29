@@ -31,7 +31,7 @@ const MarketIcon = styled.div`
 
 const CollectionIcon = styled.img`
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 5px;
   ${iconStyles}
 `
 

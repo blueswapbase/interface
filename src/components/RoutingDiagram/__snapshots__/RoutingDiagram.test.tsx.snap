@@ -68,7 +68,7 @@ exports[`renders multi route 1`] = `
   align-items: center;
   background: #E8ECFB;
   border: unset;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   color: #000;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -324,7 +324,7 @@ exports[`renders single route 1`] = `
   align-items: center;
   background: #E8ECFB;
   border: unset;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   color: #000;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

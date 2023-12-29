@@ -18,7 +18,7 @@ import SettingsTab from '../Settings'
 const Tabs = styled.div`
   ${flexRowNoWrap};
   align-items: center;
-  border-radius: 3rem;
+  border-radius: 0.3125rem;
   justify-content: space-evenly;
 `
 

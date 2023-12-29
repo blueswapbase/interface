@@ -24,7 +24,7 @@ exports[`LoadedRow.tsx renders a row 1`] = `
   transition: opacity 250ms ease-in;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .c8 {
@@ -34,7 +34,7 @@ exports[`LoadedRow.tsx renders a row 1`] = `
   -webkit-transition: background-color 250ms ease-in;
   transition: background-color 250ms ease-in;
   box-shadow: 0 0 1px white;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .c7 {

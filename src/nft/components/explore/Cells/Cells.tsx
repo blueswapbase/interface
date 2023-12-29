@@ -40,7 +40,7 @@ const TruncatedSubHeaderSmall = styled(ThemedText.SubHeaderSmall)`
 const RoundedImage = styled.div<{ src?: string }>`
   height: 36px;
   width: 36px;
-  border-radius: 36px;
+  border-radius: 5px;
   background: ${({ src, theme }) => (src ? `url(${src})` : theme.backgroundModule)};
   background-size: cover;
   background-position: center;

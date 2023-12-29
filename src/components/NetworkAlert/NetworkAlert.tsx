@@ -190,10 +190,10 @@ export function NetworkAlert() {
             <L2Icon src={logoUrl} />
             <AutoRow>
               <Header>
-                <Trans>{label} token bridge</Trans>
+                <Trans>Tap to bridge to {label}</Trans>
               </Header>
               <HideSmall>
-                <Trans>Deposit tokens to the {label} network.</Trans>
+                <Trans>Bridge assets to the {label} network.</Trans>
               </HideSmall>
             </AutoRow>
           </BodyText>

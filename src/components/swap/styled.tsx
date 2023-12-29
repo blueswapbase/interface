@@ -192,7 +192,7 @@ export const Dots = styled.span`
 
 const SwapCallbackErrorInner = styled.div`
   background-color: ${({ theme }) => transparentize(0.9, theme.accentFailure)};
-  border-radius: 1rem;
+  border-radius: 0.3125rem;
   display: flex;
   align-items: center;
   font-size: 0.825rem;

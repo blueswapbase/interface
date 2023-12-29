@@ -6,7 +6,7 @@ const Wrapper = styled.button<{ isActive?: boolean; activeElement?: boolean }>`
   align-items: center;
   background: ${({ isActive, theme }) => (isActive ? theme.accentActionSoft : 'transparent')};
   border: ${({ theme, isActive }) => (isActive ? '1px solid transparent' : `1px solid ${theme.backgroundOutline}`)};
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   display: flex;
   outline: none;
@@ -52,7 +52,7 @@ const ToggleElement = styled.span<{ isActive?: boolean; bgColor?: string; isInit
     ease-in;
   background: ${({ theme, bgColor, isActive }) =>
     isActive ? bgColor ?? theme.accentAction : bgColor ? theme.deprecated_bg4 : theme.textTertiary};
-  border-radius: 50%;
+  border-radius: 20px;
   height: 24px;
   :hover {
     ${({ bgColor, theme, isActive }) => ToggleElementHoverStyle(!!bgColor, theme, isActive)}

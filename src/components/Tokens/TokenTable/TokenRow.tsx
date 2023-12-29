@@ -275,7 +275,7 @@ const LongLoadingBubble = styled(LoadingBubble)`
   width: 90%;
 `
 const IconLoadingBubble = styled(LoadingBubble)`
-  border-radius: 50%;
+  border-radius: 5px;
   width: 24px;
 `
 export const SparkLineLoadingBubble = styled(LongLoadingBubble)`

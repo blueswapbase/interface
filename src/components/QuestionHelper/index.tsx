@@ -15,7 +15,7 @@ const QuestionWrapper = styled.div`
   background: none;
   outline: none;
   cursor: default;
-  border-radius: 36px;
+  border-radius: 5px;
   font-size: 12px;
   border-radius: 5px;
 

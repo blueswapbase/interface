@@ -48,7 +48,7 @@ const StyledPollingDot = styled.div`
   height: 8px;
   min-height: 8px;
   min-width: 8px;
-  border-radius: 50%;
+  border-radius: 5px;
   position: relative;
   background-color: ${({ theme }) => theme.backgroundInteractive};
   transition: 250ms ease background-color;
@@ -73,7 +73,7 @@ const Spinner = styled.div`
   background: transparent;
   width: 14px;
   height: 14px;
-  border-radius: 50%;
+  border-radius: 5px;
   position: relative;
   transition: 250ms ease border-color;
   left: -3px;
