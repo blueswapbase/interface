@@ -1,6 +1,5 @@
 import { Trans } from '@lingui/macro'
 import { Percent } from 'blueswap-sdk-core'
-import { useFiatOnRampButtonEnabled } from 'featureFlags/flags/fiatOnRampButton'
 import { InterfaceTrade } from 'state/routing/types'
 import styled from 'styled-components'
 import { ThemedText } from 'theme'
@@ -28,13 +27,13 @@ export default function SwapHeader({
   chainId?: number
   trade?: InterfaceTrade
 }) {
-  const fiatOnRampButtonEnabled = useFiatOnRampButtonEnabled()
+  const fiatOnRampButtonEnabled = false
 
   return (
     <StyledSwapHeader>
       <HeaderButtonContainer>
         <ThemedText.SubHeader>
-          <Trans>Swap</Trans>
+          <Trans>swap</Trans>
         </ThemedText.SubHeader>
         {fiatOnRampButtonEnabled && <SwapBuyFiatButton />}
       </HeaderButtonContainer>

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const StyledIdenticon = styled.div<{ iconSize: number }>`
   height: ${({ iconSize }) => `${iconSize}px`};
   width: ${({ iconSize }) => `${iconSize}px`};
-  border-radius: 5px;
+  border-radius: 25px;
   background-color: ${({ theme }) => theme.deprecated_bg4};
   font-size: initial;
 `

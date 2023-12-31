@@ -27,7 +27,7 @@ const DoubleLogoContainer = styled.div`
     object-fit: cover;
   }
   img:nth-child(1) {
-    border-radius: 5px 0 0 5 px;
+    border-radius: 25px 0 0 25px;
     object-position: 0 0;
   }
   img:nth-child(2) {
@@ -43,7 +43,7 @@ const StyledLogoParentContainer = styled.div`
 `
 
 const ENSAvatarImg = styled.img`
-  border-radius: 5px;
+  border-radius: 50%;
   height: 40px;
   width: 40px;
 `
@@ -61,12 +61,12 @@ const SquareChainLogo = styled.img`
 const CircleLogoImage = styled.img<{ size: string }>`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
-  border-radius: 5px;
+  border-radius: 50%;
 `
 
 const L2LogoContainer = styled.div<{ hasSquareLogo?: boolean }>`
   background-color: ${({ theme, hasSquareLogo }) => (hasSquareLogo ? theme.backgroundSurface : theme.textPrimary)};
-  border-radius: 2px;
+  border-radius: 50%;
   height: 16px;
   left: 60%;
   position: absolute;

@@ -3,7 +3,7 @@ import FeatureFlagModal from 'components/FeatureFlagModal/FeatureFlagModal'
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import { Box } from 'nft/components/Box'
 import { Column, Row } from 'nft/components/Flex'
-import { DiscordIconMenu, EllipsisIcon, GithubIconMenu, PoolIcon, TwitterIconMenu } from 'nft/components/icons'
+import { DiscordIconMenu, EllipsisIcon, GithubIconMenu, TwitterIconMenu } from 'nft/components/icons'
 import { body, bodySmall } from 'nft/css/common.css'
 import { themeVars } from 'nft/css/sprinkles.css'
 import { ReactNode, useReducer, useRef } from 'react'
@@ -130,11 +130,8 @@ export const MenuDropdown = () => {
               <Column paddingX="8" gap="4">
                 <Box display={{ sm: 'none', lg: 'flex', xxl: 'none' }}>
                   <PrimaryMenuRow to="/pool" close={toggleOpen}>
-                    <Icon>
-                      <PoolIcon width={24} height={24} fill={theme.textPrimary} />
-                    </Icon>
                     <PrimaryMenuRow.Text>
-                      <Trans>Pool</Trans>
+                      <Trans>docs</Trans>
                     </PrimaryMenuRow.Text>
                   </PrimaryMenuRow>
                 </Box>
