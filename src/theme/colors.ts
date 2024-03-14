@@ -2,7 +2,7 @@
 import { opacify } from './utils'
 
 export const colors = {
-  white: '#FFFFFF',
+  white: '#FEFEFE',
   black: '#000000',
   gray50: '#F5F6FC',
   gray100: '#E8ECFB',
