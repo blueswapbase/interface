@@ -74,8 +74,17 @@ export const PORTAL_USDC_CELO = new Token(
   'USDC (Portal from Ethereum)'
 )
 export const USDC_BASE = new Token(ChainId.BASE, '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913', 6, 'USD Coin', 'USDC')
-export const BLUE_BASE = new Token(ChainId.BASE, '0x30136B90e532141FeD006c61105cff3668b5c774', 18, 'BlueSwap', 'BLUE')
+export const LOBO_BASE = new Token(ChainId.BASE, '0x4e98b3917310b0e1f0d53c0619f87fe48deb804b', 18, 'LOBO', 'LOBO')
 export const TOSHI_BASE = new Token(ChainId.BASE, '0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4', 18, 'TOSHI', 'TOSHI')
+export const BRETT_BASE = new Token(ChainId.BASE, '0x532f27101965dd16442e59d40670faf5ebb142e4', 18, 'BRETT', 'BRETT')
+export const DOGINME_BASE = new Token(
+  ChainId.BASE,
+  '0xade9bcd4b968ee26bed102dd43a55f6a8c2416df',
+  18,
+  'doginme',
+  'doginme'
+)
+export const AERO_BASE = new Token(ChainId.BASE, '0x532f27101965dd16442e59d40670faf5ebb142e4', 18, 'AERO', 'Aerodrome')
 
 export const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
 export const DAI_ARBITRUM_ONE = new Token(

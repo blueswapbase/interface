@@ -2,8 +2,9 @@
 import { ChainId, Currency, Token } from 'blueswap-sdk-core'
 
 import {
+  AERO_BASE,
   ARB,
-  BLUE_BASE,
+  BRETT_BASE,
   BTC_BSC,
   BUSD_BSC,
   CEUR_CELO,
@@ -17,7 +18,9 @@ import {
   DAI_BSC,
   DAI_OPTIMISM,
   DAI_POLYGON,
+  DOGINME_BASE,
   ETH_BSC,
+  LOBO_BASE,
   nativeOnChain,
   OP,
   PORTAL_ETH_CELO,
@@ -95,7 +98,10 @@ export const COMMON_BASES: ChainCurrencyList = {
     nativeOnChain(ChainId.BASE),
     WRAPPED_NATIVE_CURRENCY[ChainId.BASE] as Token,
     USDC_BASE,
-    BLUE_BASE,
+    LOBO_BASE,
+    BRETT_BASE,
+    AERO_BASE,
+    DOGINME_BASE,
     TOSHI_BASE,
   ],
   [ChainId.BASE_GOERLI]: [nativeOnChain(ChainId.BASE_GOERLI), WRAPPED_NATIVE_CURRENCY[ChainId.BASE_GOERLI] as Token],

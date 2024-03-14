@@ -213,7 +213,7 @@ function useStepContents(args: ContentArgs): Record<PendingConfirmModalState, Pe
         bottomLabel: revocationPending ? t`Pending...` : t`Proceed in your wallet`,
       },
       [ConfirmModalState.APPROVING_TOKEN]: {
-        title: t`Enable spending ${approvalCurrency?.symbol ?? 'this token'} on Uniswap`,
+        title: t`Enable spending ${approvalCurrency?.symbol ?? 'this token'} on blueswap`,
         subtitle: (
           <ExternalLink href="https://support.uniswap.org/hc/en-us/articles/8120520483085">
             <Trans>Why is this required?</Trans>

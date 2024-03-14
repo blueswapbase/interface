@@ -83,7 +83,7 @@ const Tokens = () => {
             placement="bottom"
           >
             <ThemedText.LargeHeader>
-              <Trans>trending tokens on blueswap</Trans>
+              <Trans>Trending Tokens</Trans>
             </ThemedText.LargeHeader>
           </MouseoverTooltip>
         </TitleContainer>

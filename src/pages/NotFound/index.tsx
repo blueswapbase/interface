@@ -1,15 +1,10 @@
 import { Trans } from '@lingui/macro'
-import { InterfacePageName } from '@uniswap/analytics-events'
-import { Trace } from 'analytics'
 import { SmallButtonPrimary } from 'components/Button'
 import { useIsMobile } from 'nft/hooks'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { ThemedText } from 'theme'
 import { useIsDarkMode } from 'theme/components/ThemeToggle'
-
-import darkImage from '../../assets/images/404-page-dark.png'
-import lightImage from '../../assets/images/404-page-light.png'
 
 const Image = styled.img`
   max-width: 510px;
@@ -47,20 +42,17 @@ export default function NotFound() {
 
   return (
     <PageWrapper>
-      <Trace page={InterfacePageName.NOT_FOUND} shouldLogImpression>
-        <Header>
-          <Container>
-            <Title>404</Title>
-            <Paragraph color="textSecondary">
-              <Trans>Page not found!</Trans>
-            </Paragraph>
-          </Container>
-          <Image src={isDarkMode ? darkImage : lightImage} alt="Liluni" />
-        </Header>
-        <SmallButtonPrimary as={Link} to="/">
-          <Trans>Oops, take me back to Swap</Trans>
-        </SmallButtonPrimary>
-      </Trace>
+      <Header>
+        <Container>
+          <Title>404</Title>
+          <Paragraph color="textSecondary">
+            <Trans>Page not found!</Trans>
+          </Paragraph>
+        </Container>
+      </Header>
+      <SmallButtonPrimary as={Link} to="/">
+        <Trans>Oops, take me back to Swap</Trans>
+      </SmallButtonPrimary>
     </PageWrapper>
   )
 }

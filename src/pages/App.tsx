@@ -31,7 +31,6 @@ import DarkModeQueryParamReader from '../theme/components/DarkModeQueryParamRead
 import AddLiquidity from './AddLiquidity'
 import { RedirectDuplicateTokenIds } from './AddLiquidity/redirects'
 import { RedirectDuplicateTokenIdsV2 } from './AddLiquidityV2/redirects'
-import Landing from './Landing'
 import MigrateV2 from './MigrateV2'
 import MigrateV2Pair from './MigrateV2/MigrateV2Pair'
 import NotFound from './NotFound'
@@ -223,7 +222,7 @@ export default function App() {
                       // if react-router-dom matches "/" with window.location.hash defined, it means that we're
                       // using BrowserRouter and can safely redirect to a path route
                       <RedirectHashToPath>
-                        <Landing />
+                        <Swap />
                       </RedirectHashToPath>
                     }
                   />

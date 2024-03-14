@@ -4,6 +4,7 @@ import { useAccountDrawer } from 'components/AccountDrawer'
 import Web3Status from 'components/Web3Status'
 import { chainIdToBackendName } from 'graphql/data/util'
 import { useDisableNFTRoutes } from 'hooks/useDisableNFTRoutes'
+import { useIsDocsPage } from 'hooks/useIsDocsPage'
 import { useIsNftPage } from 'hooks/useIsNftPage'
 import { useIsPoolsPage } from 'hooks/useIsPoolsPage'
 import { Box } from 'nft/components/Box'
@@ -58,6 +59,7 @@ export const PageTabs = () => {
   const chainName = chainIdToBackendName(connectedChainId)
 
   const isPoolActive = useIsPoolsPage()
+  const isDocsActive = useIsDocsPage()
   const isNftPage = useIsNftPage()
 
   const shouldDisableNFTRoutes = useDisableNFTRoutes()
@@ -65,20 +67,17 @@ export const PageTabs = () => {
   return (
     <>
       <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
-        <Trans>swap</Trans>
+        <Trans>Swap</Trans>
       </MenuItem>
       <MenuItem href={`/tokens/${chainName.toLowerCase()}`} isActive={pathname.startsWith('/tokens')}>
-        <Trans>tokens</Trans>
+        <Trans>Tokens</Trans>
       </MenuItem>
       <MenuItem href="/pools" dataTestId="pool-nav-link" isActive={isPoolActive}>
-        <Trans>pools</Trans>
-      </MenuItem>
-      <MenuItem href="/pools" dataTestId="pool-nav-link" isActive={isPoolActive}>
-        <Trans>surf</Trans>
+        <Trans>Pools</Trans>
       </MenuItem>
       <Box display={{ sm: 'flex', lg: 'none', xxl: 'flex' }} width="full">
-        <MenuItem href="/pools" dataTestId="pool-nav-link" isActive={isPoolActive}>
-          <Trans>docs</Trans>
+        <MenuItem href="/docs" dataTestId="pool-nav-link" isActive={isDocsActive}>
+          <Trans>Docs</Trans>
         </MenuItem>
       </Box>
       <Box marginY={{ sm: '4', md: 'unset' }}>
