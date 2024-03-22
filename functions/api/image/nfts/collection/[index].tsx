@@ -80,7 +80,7 @@ export const onRequest: PagesFunction = async ({ params, request }) => {
                   style={{
                     gap: '12px',
                     fontSize: '72px',
-                    fontFamily: 'Inter',
+                    fontFamily: 'Rubik',
                     color: 'white',
                     display: 'flex',
                     flexDirection: 'row',
@@ -104,7 +104,7 @@ export const onRequest: PagesFunction = async ({ params, request }) => {
         height: 630,
         fonts: [
           {
-            name: 'Inter',
+            name: 'Rubik',
             data: fontData,
             style: 'normal',
           },

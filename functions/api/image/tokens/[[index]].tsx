@@ -97,7 +97,7 @@ export const onRequest: PagesFunction = async ({ params, request }) => {
                 >
                   <div
                     style={{
-                      fontFamily: 'Inter',
+                      fontFamily: 'Rubik',
                       fontSize: '48px',
                       lineHeight: '58px',
                       color: 'white',
@@ -121,7 +121,7 @@ export const onRequest: PagesFunction = async ({ params, request }) => {
               )}
               <div
                 style={{
-                  fontFamily: 'Inter',
+                  fontFamily: 'Rubik',
                   fontSize: '72px',
                   lineHeight: '72px',
                   marginLeft: '-5px',
@@ -141,7 +141,7 @@ export const onRequest: PagesFunction = async ({ params, request }) => {
               >
                 <div
                   style={{
-                    fontFamily: 'Inter',
+                    fontFamily: 'Rubik',
                     fontSize: '168px',
                     lineHeight: '133px',
                     marginLeft: '-13px',
@@ -164,7 +164,7 @@ export const onRequest: PagesFunction = async ({ params, request }) => {
         height: 630,
         fonts: [
           {
-            name: 'Inter',
+            name: 'Rubik',
             data: fontData,
             style: 'normal',
           },
