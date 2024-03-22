@@ -184,22 +184,20 @@ export function NetworkAlert() {
 
   return bridge ? (
     <RootWrapper>
-      <ContentWrapper chainId={chainId} darkMode={darkMode} logoUrl={logoUrl}>
-        <LinkOutToBridge href={bridge}>
-          <BodyText color={textColor}>
-            <L2Icon src={logoUrl} />
-            <AutoRow>
-              <Header>
-                <Trans>Tap to bridge to {label}</Trans>
-              </Header>
-              <HideSmall>
-                <Trans>Bridge assets to the {label} network.</Trans>
-              </HideSmall>
-            </AutoRow>
-          </BodyText>
-          <StyledArrowUpRight color={textColor} />
-        </LinkOutToBridge>
-      </ContentWrapper>
+      <LinkOutToBridge href={bridge}>
+        <BodyText color={textColor}>
+          <L2Icon src={logoUrl} />
+          <AutoRow>
+            <Header>
+              <Trans>You&apos;re about to swap on {label}.</Trans>
+            </Header>
+            <HideSmall>
+              <Trans>Need to bridge more ETH? Click here.</Trans>
+            </HideSmall>
+          </AutoRow>
+        </BodyText>
+        <StyledArrowUpRight color={textColor} />
+      </LinkOutToBridge>
     </RootWrapper>
   ) : null
 }

@@ -63,6 +63,7 @@ import { computeRealizedPriceImpact, warningSeverity } from 'utils/prices'
 import { didUserReject } from 'utils/swapErrorToUserReadableMessage'
 
 import { useScreenSize } from '../../hooks/useScreenSize'
+import loboswapImage from './loboswap.png'
 import { UniswapXOptIn } from './UniswapXOptIn'
 
 export const ArrowContainer = styled.div`
@@ -140,10 +141,10 @@ export default function SwapPage({ className }: { className?: string }) {
   const location = useLocation()
 
   const supportedChainId = asSupportedChain(connectedChainId)
-
   return (
     <Trace page={InterfacePageName.SWAP_PAGE} shouldLogImpression>
       <PageWrapper>
+        <img src={loboswapImage} alt="Loboswap" style={{ width: '100%', marginBottom: '16px' }} />
         <Swap
           className={className}
           chainId={supportedChainId ?? ChainId.MAINNET}

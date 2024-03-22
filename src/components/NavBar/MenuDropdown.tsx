@@ -3,7 +3,7 @@ import FeatureFlagModal from 'components/FeatureFlagModal/FeatureFlagModal'
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import { Box } from 'nft/components/Box'
 import { Column, Row } from 'nft/components/Flex'
-import { DiscordIconMenu, EllipsisIcon, GithubIconMenu, TwitterIconMenu } from 'nft/components/icons'
+import { EllipsisIcon, TwitterIconMenu } from 'nft/components/icons'
 import { body, bodySmall } from 'nft/css/common.css'
 import { themeVars } from 'nft/css/sprinkles.css'
 import { ReactNode, useReducer, useRef } from 'react'
@@ -127,15 +127,6 @@ export const MenuDropdown = () => {
         {isOpen && (
           <NavDropdown top={{ sm: 'unset', lg: '56' }} bottom={{ sm: '50', lg: 'unset' }} right="0">
             <Column gap="16">
-              <Column paddingX="8" gap="4">
-                <Box display={{ sm: 'none', lg: 'flex', xxl: 'none' }}>
-                  <PrimaryMenuRow to="/pool" close={toggleOpen}>
-                    <PrimaryMenuRow.Text>
-                      <Trans>docs</Trans>
-                    </PrimaryMenuRow.Text>
-                  </PrimaryMenuRow>
-                </Box>
-              </Column>
               <Separator />
               <Box
                 display="flex"
@@ -151,24 +142,8 @@ export const MenuDropdown = () => {
                 )}
               </Box>
               <IconRow>
-                <Icon href="https://discord.gg/xDZgASjHHZ">
-                  <DiscordIconMenu
-                    className={styles.hover}
-                    width={24}
-                    height={24}
-                    color={themeVars.colors.textSecondary}
-                  />
-                </Icon>
-                <Icon href="https://x.com/blueswapbase">
+                <Icon href="https://x.com/lobo_base">
                   <TwitterIconMenu
-                    className={styles.hover}
-                    width={24}
-                    height={24}
-                    color={themeVars.colors.textSecondary}
-                  />
-                </Icon>
-                <Icon href="https://github.com/blueswapbase">
-                  <GithubIconMenu
                     className={styles.hover}
                     width={24}
                     height={24}
