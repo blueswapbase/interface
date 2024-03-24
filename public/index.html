@@ -15,52 +15,50 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#FC72FF" />
+    <% const cspConfig = require('./csp.json'); %>
     <meta
-      http-equiv="Content-Security-Policy"
-      <% if (process.env.REACT_APP_CSP_ALLOW_UNSAFE_EVAL) { %>
-        content="script-src 'self' 'unsafe-inline' 'unsafe-eval'"
-      <% } else { %>
-        content="script-src 'self' 'unsafe-inline'"
-      <% } %>
-    />
-
-    <!-- 
+      http-equiv="Content-Security-Policy" 
+      content="default-src <%= cspConfig.defaultSrc.join(' ') %>; script-src <%= cspConfig.scriptSrc.join(' ') %>; style-src <%= cspConfig.styleSrc.join(' ') %>; img-src <%= cspConfig.imgSrc.join(' ') %>; frame-src <%= cspConfig.frameSrc.join(' ') %>; connect-src <%= cspConfig.connectSrc.join(' ') %>; worker-src <%= cspConfig.workerSrc.join(' ') %>;"
+    >
+ <!-- 
       Apple Smart App Banner for Safari on iOS
       https://developer.apple.com/documentation/webkit/promoting_apps_with_smart_app_banners
      -->
-    <meta name="apple-itunes-app" content="app-id=6443944476">
-
+     <meta name="apple-itunes-app" content="app-id=6443944476">
     <!--
       manifest.json provides metadata used when the app is installed as a PWA.
       See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <link rel="preload" href="%PUBLIC_URL%/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preconnect" href="https://interface.gateway.uniswap.org/" crossorigin/>
+    <link rel="preconnect" href="https://mainnet.infura.io/" crossorigin/>
 
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Rubik-Medium.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Rubik-Medium.woff2" as="font" type="font/woff2" crossorigin />
+   
     <style>
       * {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Rubik', sans-serif;
         box-sizing: border-box;
       }
 
       /**
-          Explicitly load Inter var from public/ so it does not block LCP's critical path.
+          Explicitly load Basel var from public/ so it does not block LCP's critical path.
         */
       @font-face {
-        font-family: 'Inter custom';
-        font-weight: 100 900;
+        font-family: 'Rubik';
+        font-weight: 400;
         font-style: normal;
         font-display: block;
-        font-named-instance: 'Regular';
-        src: url(%PUBLIC_URL%/fonts/Inter-roman.var.woff2) format('woff2 supports variations(gvar)'),
-          url(%PUBLIC_URL%/fonts/Inter-roman.var.woff2) format('woff2-variations'),
-          url(%PUBLIC_URL%/fonts/Inter-roman.var.woff2) format('woff2');
+        src: 
+          url('%PUBLIC_URL%/fonts/Rubik-Medium.woff2') format('woff2'),
+          url('%PUBLIC_URL%/fonts/Rubik-Medium.woff') format('woff');
       }
 
       @supports (font-variation-settings: normal) {
         * {
-          font-family: 'Inter custom', sans-serif;
+          font-family: 'Rubik', sans-serif;
         }
       }
 
@@ -76,9 +74,11 @@
 
       html {
         font-size: 16px;
+        font-weight: 400;
         font-variant: none;
         font-smooth: always;
-        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility !important;
+        -webkit-font-smoothing: antialiased !important;
         -moz-osx-font-smoothing: grayscale;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       }
