@@ -33,7 +33,7 @@ export default function SwapHeader({
     <StyledSwapHeader>
       <HeaderButtonContainer>
         <ThemedText.SubHeader>
-          <Trans>swap</Trans>
+          <Trans>SWAP</Trans>
         </ThemedText.SubHeader>
         {fiatOnRampButtonEnabled && <SwapBuyFiatButton />}
       </HeaderButtonContainer>
