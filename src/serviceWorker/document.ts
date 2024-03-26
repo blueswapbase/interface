@@ -15,12 +15,12 @@ const DOCUMENT = process.env.PUBLIC_URL + '/index.html'
 export function matchDocument({ request, url }: RouteMatchCallbackOptions) {
   // If this isn't a navigation, skip.
   if (request.mode !== 'navigate') {
-    return true
+    return false
   }
 
   // If this looks like a resource (ie has a file extension), skip.
   if (url.pathname.match(fileExtensionRegexp)) {
-    return true
+    return false
   }
 
   // If this isn't app.uniswap.org (or a local build), skip.
