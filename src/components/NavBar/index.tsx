@@ -73,8 +73,13 @@ export const PageTabs = () => {
         <Trans>Tokens</Trans>
       </MenuItem>
       <MenuItem href="/pools" dataTestId="pool-nav-link" isActive={isPoolActive}>
-        <Trans>Pool</Trans>
+        <Trans>Pools</Trans>
       </MenuItem>
+      <Box display={{ sm: 'flex', lg: 'none', xxl: 'flex' }} width="full">
+        <MenuItem href="/docs" dataTestId="pool-nav-link" isActive={isDocsActive}>
+          <Trans>Docs</Trans>
+        </MenuItem>
+      </Box>
       <Box marginY={{ sm: '4', md: 'unset' }}>
         <MenuDropdown />
       </Box>
