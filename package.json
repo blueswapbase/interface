@@ -3,8 +3,7 @@
   "version": "1.1.0",
   "description": "Uniswap Interface",
   "license": "GPL-3.0-or-later",
-  "proxy": "https://interface-inky-three.vercel.app/",
-  "scripts": {
+    "scripts": {
     "ajv": "node scripts/compile-ajv-validators.js",
     "contracts:compile:abi": "typechain --target ethers-v5 --out-dir src/abis/types \"./src/abis/**/*.json\"",
     "contracts:compile:v3": "typechain --target ethers-v5 --out-dir src/types/v3 \"./node_modules/@uniswap/**/artifacts/contracts/**/*[!dbg].json\"",
@@ -249,6 +248,7 @@
     "get-graphql-schema": "^2.1.2",
     "graphql": "^16.5.0",
     "graphql-request": "^3.4.0",
+    "http-proxy-middleware": "^2.0.6",
     "https-browserify": "^1.0.0",
     "immer": "^9.0.6",
     "inter-ui": "^3.13.1",
