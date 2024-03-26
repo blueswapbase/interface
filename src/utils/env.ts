@@ -12,7 +12,7 @@ export function isStagingEnv(): boolean {
 }
 
 export function isProductionEnv(): boolean {
-  return Boolean(process.env.REACT_APP_STAGING)
+  return process.env.NODE_ENV === 'development'
 }
 
 export function isBrowserRouterEnabled(): boolean {
@@ -35,7 +35,7 @@ export function getEnvName(): 'production' | 'staging' | 'development' {
     return 'staging'
   }
   if (isProductionEnv()) {
-    return 'staging'
+    return 'development'
   }
   return 'development'
 }
