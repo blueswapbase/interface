@@ -51,10 +51,10 @@ export function isSentryEnabled(): boolean {
 
 export function getEnvName(): 'production' | 'staging' | 'development' {
   if (isStagingEnv()) {
-    return 'staging'
+    return 'development'
   }
   if (isProductionEnv()) {
-    return 'production'
+    return 'development'
   }
   return 'development'
 }
