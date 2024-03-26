@@ -33,8 +33,8 @@ function isLocalhost({ hostname }: { hostname: string }): boolean {
 
 export function isSentryEnabled(): boolean {
   // Disable in e2e test environments
-  if (isStagingEnv() && !isAppUniswapStagingOrg(window.location)) return false
-  if (isProductionEnv() && !isAppUniswapOrg(window.location)) return false
+  if (isStagingEnv()) return false
+  if (isProductionEnv()) return false
   return process.env.REACT_APP_SENTRY_ENABLED === 'true'
 }
 
