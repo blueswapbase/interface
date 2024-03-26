@@ -1,6 +1,9 @@
+import { isAppUniswapOrg, isAppUniswapStagingOrg } from 'utils/env'
 import { RouteHandlerCallbackOptions, RouteMatchCallbackOptions } from 'workbox-core'
 import { getCacheKeyForURL, matchPrecache } from 'workbox-precaching'
 import { Route } from 'workbox-routing'
+
+import { isDevelopment } from './utils'
 
 const fileExtensionRegexp = new RegExp('/[^/?]+\\.[^/]+$')
 const DOCUMENT = process.env.PUBLIC_URL + '/index.html'
@@ -19,6 +22,13 @@ export function matchDocument({ request, url }: RouteMatchCallbackOptions) {
   if (url.pathname.match(fileExtensionRegexp)) {
     return false
   }
+
+  // If this isn't app.uniswap.org (or a local build), skip.
+  // IPFS gateways may not have domain separation, so they cannot use document caching.
+  if (!(isDevelopment() || isAppUniswapStagingOrg(url) || isAppUniswapOrg(url))) {
+    return false
+  }
+
   return true
 }
 

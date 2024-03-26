@@ -12,10 +12,29 @@ export function isStagingEnv(): boolean {
 }
 
 export function isProductionEnv(): boolean {
-  return process.env.NODE_ENV === 'production'
+  return process.env.NODE_ENV === 'production' && !isStagingEnv()
+}
+
+export function isAppUniswapOrg({ hostname }: { hostname: string }): boolean {
+  return hostname === 'app.uniswap.org'
+}
+
+export function isAppUniswapStagingOrg({ hostname }: { hostname: string }): boolean {
+  return hostname === 'app.uniswap-staging.org'
 }
 
 export function isBrowserRouterEnabled(): boolean {
+  if (isProductionEnv()) {
+    if (
+      isAppUniswapOrg(window.location) ||
+      isAppUniswapStagingOrg(window.location) ||
+      // Cypress tests
+      isLocalhost(window.location)
+    ) {
+      return true
+    }
+    return false
+  }
   return true
 }
 
@@ -25,9 +44,9 @@ function isLocalhost({ hostname }: { hostname: string }): boolean {
 
 export function isSentryEnabled(): boolean {
   // Disable in e2e test environments
-  if (isStagingEnv()) return false
-  if (isProductionEnv()) return false
-  return process.env.REACT_APP_SENTRY_ENABLED === 'false'
+  if (isStagingEnv() && !isAppUniswapStagingOrg(window.location)) return false
+  if (isProductionEnv() && !isAppUniswapOrg(window.location)) return false
+  return process.env.REACT_APP_SENTRY_ENABLED === 'true'
 }
 
 export function getEnvName(): 'production' | 'staging' | 'development' {
@@ -35,7 +54,7 @@ export function getEnvName(): 'production' | 'staging' | 'development' {
     return 'staging'
   }
   if (isProductionEnv()) {
-    return 'development'
+    return 'production'
   }
   return 'development'
 }
