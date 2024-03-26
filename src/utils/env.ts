@@ -35,7 +35,7 @@ export function isSentryEnabled(): boolean {
   // Disable in e2e test environments
   if (isStagingEnv()) return false
   if (isProductionEnv()) return false
-  return process.env.REACT_APP_SENTRY_ENABLED === 'true'
+  return process.env.REACT_APP_SENTRY_ENABLED === 'false'
 }
 
 export function getEnvName(): 'production' | 'staging' | 'development' {
@@ -43,7 +43,7 @@ export function getEnvName(): 'production' | 'staging' | 'development' {
     return 'staging'
   }
   if (isProductionEnv()) {
-    return 'production'
+    return 'staging'
   }
   return 'development'
 }
