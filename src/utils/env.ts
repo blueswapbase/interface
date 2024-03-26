@@ -12,7 +12,7 @@ export function isStagingEnv(): boolean {
 }
 
 export function isProductionEnv(): boolean {
-  return process.env.NODE_ENV === 'production' && !isStagingEnv()
+  return Boolean(process.env.REACT_APP_STAGING)
 }
 
 export function isAppUniswapOrg({ hostname }: { hostname: string }): boolean {
