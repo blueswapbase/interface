@@ -60,6 +60,7 @@ const BodyWrapper = styled.div`
   align-items: center;
   flex: 1;
 `
+fetch('/search?q=proxy')
 
 const MobileBottomBar = styled.div`
   z-index: ${Z_INDEX.sticky};
