@@ -16,7 +16,7 @@ export function isProductionEnv(): boolean {
 }
 
 export function isAppUniswapOrg({ hostname }: { hostname: string }): boolean {
-  return hostname === 'app.lobobase.com'
+  return hostname === 'app.uniswap.org' || hostname === 'app.lobobase.com'
 }
 
 export function isAppUniswapStagingOrg({ hostname }: { hostname: string }): boolean {
@@ -24,17 +24,6 @@ export function isAppUniswapStagingOrg({ hostname }: { hostname: string }): bool
 }
 
 export function isBrowserRouterEnabled(): boolean {
-  if (isProductionEnv()) {
-    if (
-      isAppUniswapOrg(window.location) ||
-      isAppUniswapStagingOrg(window.location) ||
-      // Cypress tests
-      isLocalhost(window.location)
-    ) {
-      return true
-    }
-    return true
-  }
   return true
 }
 
@@ -46,7 +35,7 @@ export function isSentryEnabled(): boolean {
   // Disable in e2e test environments
   if (isStagingEnv() && !isAppUniswapStagingOrg(window.location)) return false
   if (isProductionEnv() && !isAppUniswapOrg(window.location)) return false
-  return process.env.REACT_APP_SENTRY_ENABLED === 'false'
+  return process.env.REACT_APP_SENTRY_ENABLED === 'true'
 }
 
 export function getEnvName(): 'production' | 'staging' | 'development' {
@@ -54,7 +43,7 @@ export function getEnvName(): 'production' | 'staging' | 'development' {
     return 'staging'
   }
   if (isProductionEnv()) {
-    return 'staging'
+    return 'production'
   }
   return 'development'
 }
