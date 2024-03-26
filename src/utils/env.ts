@@ -15,14 +15,6 @@ export function isProductionEnv(): boolean {
   return Boolean(process.env.REACT_APP_STAGING)
 }
 
-export function isAppUniswapOrg({ hostname }: { hostname: string }): boolean {
-  return hostname === 'app.uniswap.org' || hostname === 'app.lobobase.com'
-}
-
-export function isAppUniswapStagingOrg({ hostname }: { hostname: string }): boolean {
-  return hostname === 'app.uniswap-staging.org'
-}
-
 export function isBrowserRouterEnabled(): boolean {
   return true
 }
