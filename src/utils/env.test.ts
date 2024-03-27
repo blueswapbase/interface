@@ -31,8 +31,8 @@ describe('env', () => {
 
   describe('isProductionEnv', () => {
     it('is true if NODE_ENV=production', () => {
-      setEnv({ NODE_ENV: 'development' })
-      expect(isProductionEnv()).toBe(false)
+      setEnv({ NODE_ENV: 'production' })
+      expect(isProductionEnv()).toBe(true)
     })
 
     it('is false if NODE_ENV=production and REACT_APP_STAGING=1', () => {
