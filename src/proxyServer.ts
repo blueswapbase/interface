@@ -4,13 +4,13 @@ import { createProxyMiddleware } from 'http-proxy-middleware'
 const app = express()
 
 app.use(
-  '/graphql',
+  '/v1/graphql',
   createProxyMiddleware({
     target: 'https://api.uniswap.org',
     changeOrigin: true,
     onProxyReq: (proxyReq, req, res) => {
       // Or, if you need to set a specific origin, you can uncomment the following line:
-      proxyReq.setHeader('Origin', 'https://api.uniswap.org')
+      proxyReq.setHeader('Origin', 'localhost://3001')
     },
   })
 )
