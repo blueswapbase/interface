@@ -16,9 +16,9 @@ app.use(
   createProxyMiddleware({
     target: 'https://api.uniswap.org',
     changeOrigin: true,
-    pathRewrite: {
-      '^/graphql': '/v1/graphql', // Rewrite the URL path
-    },
+    //pathRewrite: {
+    //  '^/graphql': '/v1/graphql', // Rewrite the URL path
+    //},
   })
 )
 
