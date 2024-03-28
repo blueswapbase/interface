@@ -13,7 +13,7 @@ type SVGProps = React.SVGProps<SVGSVGElement> & {
 
 export const UniIcon = (
   props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLImageElement> & React.ImgHTMLAttributes<HTMLImageElement>
-) => <img src="../../public/Circle-icon.png" alt="Lobo" {...props} />
+) => <img src="/Circle-icon.png" alt="Lobo" {...props} />
 
 export const ChevronUpIcon = ({
   secondaryColor,
