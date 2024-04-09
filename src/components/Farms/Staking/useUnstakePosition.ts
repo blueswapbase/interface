@@ -20,10 +20,10 @@ export const useUnstakePosition = () => {
         const incentiveTuple = getIncentiveTuple(incentiveDetails)
 
         console.log(stakerContract)
-        const unstakeTx = await stakerContract.unstakeToken(incentiveTuple, tokenId).send({ from: account })
+        const unstakeTx = await stakerContract.unstakeToken(incentiveTuple, tokenId)
         await unstakeTx.wait()
 
-        const withdrawTx = await stakerContract.withdrawToken(tokenId, account, '0x').send({ from: account })
+        const withdrawTx = await stakerContract.withdrawToken(tokenId, account, '0x')
         await withdrawTx.wait()
 
         // const incentiveTuple = getIncentiveTuple(incentiveDetails)

@@ -18,8 +18,11 @@ export const useStakePosition = () => {
       const positionContract = getContract(POSITION_ADDRESS, positionABI, provider, account)
 
       const encodedIncentive = getIncentiveKeyEncoded(incentiveDetails)
+      console.log(encodedIncentive)
       const hashedIncentive = getIncentiveKeyHashed(encodedIncentive)
+      console.log(hashedIncentive)
       try {
+        console.log(STAKER_ADDRESS, tokenId)
         const approveTx = await positionContract.approve(STAKER_ADDRESS, tokenId)
         await approveTx.wait()
 
@@ -27,17 +30,17 @@ export const useStakePosition = () => {
           account,
           STAKER_ADDRESS,
           tokenId,
-          hashedIncentive
+          encodedIncentive
         )
         await stakeTx.wait()
 
-        // const stakeTx = await positionContract['safeTransferFrom(address,address,uint256,bytes)'](
-        // account,
-        // STAKER_ADDRESS,
-        // tokenId,
-        // encodedIncentive
-        // ).send({ from: account })
-        // await stakeTx.wait()
+        // const stakingCalls = [
+        // positionContract.approve(STAKER_ADDRESS, tokenId).encodeABI(),
+        // positionContract.methods.safeTransferFrom(account, STAKER_ADDRESS, tokenId, hashedIncentive).encodeABI(),
+        // ]
+        //
+        // await positionContract.multicall(stakingCalls).send({ from: account })
+        //
         console.log('Staking successful')
       } catch (error) {
         console.error('Staking failed', error)

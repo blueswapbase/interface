@@ -107,15 +107,15 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
               if (isOwned && isOwned != null) {
                 ownedTokenId = Number(staked.tokenId) // Update the ownedTokenId
               }
-              console.log(ownedTokenId)
-              console.log()
+              //console.log(ownedTokenId)
+              //console.log()
               return isOwned
             }
           )
           if (ownedByAccount) {
             isOwnedByAccount = true
           }
-          console.log(isOwnedByAccount)
+          //console.log(isOwnedByAccount)
         })
         return (
           <TokenRow
@@ -167,19 +167,19 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
 
           const ownedStakedTokenIdsForIncentive = ownedTokenIdsForIncentive.filter((tokenId) => {
             const latestTransfer = latestTransfers[tokenId]
-            console.log(latestTransfer)
+            //console.log(latestTransfer)
             if (!latestTransfer) return false // No transfer found for this tokenId, should not happen but added for safety
             // If the latest transfer was 'from' the account, it's still staked. Otherwise, it's not.
             return latestTransfer.from.toLowerCase() === account?.toLowerCase()
           })
 
-          console.log(ownedStakedTokenIdsForIncentive)
+          //console.log(ownedStakedTokenIdsForIncentive)
 
           let isOwnedbyAccount = false
           if (ownedTokenIdsForIncentive.length > 0)
             // && ownedStakedTokenIdsForIncentive.length > 0)
             isOwnedbyAccount = true
-          console.log(isOwnedbyAccount)
+          //console.log(isOwnedbyAccount)
 
           return ownedTokenIdsForIncentive.map((tokenId: number, tokenIdIndex: any) => (
             <TokenRow
