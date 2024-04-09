@@ -1,32 +1,40 @@
 /* eslint-disable import/no-unused-modules */
 import { useWeb3React } from '@web3-react/core'
 import { useCallback } from 'react'
-import { getContract } from 'utils' // Ensure this utility function is correctly implemented
+import { getContract } from 'utils'
 
-import { STAKER_ADDRESS } from './config' // Ensure the path and constant names are correct
-import { getIncentiveKeyEncoded, getSelectedIncentiveTuple } from './encodeIncentives' // Ensure the path and function names are correct
-import STAKER_ABI from './stakerV3.json' // Ensure the path and import name are correct
+import { STAKER_ADDRESS } from './config'
+import { getIncentiveTuple } from './encodeIncentives'
+import STAKER_ABI from './staker.json'
 
 export const useUnstakePosition = () => {
   const { provider, account } = useWeb3React()
 
   const unstakePosition = useCallback(
-    async (tokenId: number, idx: number) => {
-      if (!provider || !account) return
+    async (tokenId: number, incentiveDetails: any) => {
+      if (!provider || !account || !incentiveDetails) return
 
       const stakerContract = getContract(STAKER_ADDRESS, STAKER_ABI, provider, account)
 
       try {
-        // Unstake and withdraw token in a single transaction, if your contract supports it
-        // Otherwise, you might need separate transactions for unstaking and withdrawing
+        const incentiveTuple = getIncentiveTuple(incentiveDetails)
 
-        const selectedTuple = getSelectedIncentiveTuple(idx)
-        const encodedIncentive = getIncentiveKeyEncoded(selectedTuple)
-
-        // Assuming your staker contract has an 'unstakeAndWithdraw' function
-        // Replace 'unstakeAndWithdraw' with the actual function name if different
-        const unstakeTx = await stakerContract['unstakeAndWithdraw'](encodedIncentive, tokenId)
+        console.log(stakerContract)
+        const unstakeTx = await stakerContract.unstakeToken(incentiveTuple, tokenId).send({ from: account })
         await unstakeTx.wait()
+
+        const withdrawTx = await stakerContract.withdrawToken(tokenId, account, '0x').send({ from: account })
+        await withdrawTx.wait()
+
+        // const incentiveTuple = getIncentiveTuple(incentiveDetails)
+        //
+        // console.log(stakerContract)
+        // const unstakingCalls = [
+        // stakerContract.unstakeToken(incentiveTuple, tokenId).encodeABI(),
+        // stakerContract.withdrawToken(tokenId, account, '0x').encodeABI(),
+        // ]
+        //
+        // await stakerContract['multicall(bytes[])'](unstakingCalls).send({ from: account })
 
         console.log('Unstaking successful')
       } catch (error) {

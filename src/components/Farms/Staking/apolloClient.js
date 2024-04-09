@@ -2,7 +2,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 
 const client = new ApolloClient({
-  uri: 'https://api.studio.thegraph.com/query/70098/loboswap-farms/version/latest',
+  uri: 'https://api.studio.thegraph.com/query/70098/loboswap-base/v0.0.3',
   cache: new InMemoryCache(),
 })
 

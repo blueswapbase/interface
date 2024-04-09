@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unused-modules */
 import { gql } from '@apollo/client'
 
 export const GET_STAKED_TOKENS = gql`
@@ -16,6 +17,7 @@ export const GET_STAKED_TOKENS = gql`
       to
       from
       tokenId
+      blockNumber
     }
     incentiveCreateds(where: { blockTimestamp_gt: "1710000000" }, orderBy: blockTimestamp, orderDirection: desc) {
       reward

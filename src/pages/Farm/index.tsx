@@ -1,7 +1,10 @@
+import { ApolloProvider } from '@apollo/client'
 import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
 import { MAX_WIDTH_MEDIA_BREAKPOINT } from 'components/Farms/constants'
 import TokenTable from 'components/Farms/FarmTable/TokenTable'
+import client from 'components/Farms/Staking/apolloClient'
+//import CreateIncentiveModal from 'components/Farms/Staking/CreateIncentiveModal'
 import { useStakePosition } from 'components/Farms/Staking/useStakePosition'
 import { useUnstakePosition } from 'components/Farms/Staking/useUnstakePosition'
 import { filterStringAtom } from 'components/Farms/state'
@@ -34,6 +37,24 @@ const TitleContainer = styled.div`
   display: flex;
 `
 
+const CreateButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+`
+// const [isModalOpen, setIsModalOpen] = useState(false)
+// const handleOpenModal = () => {
+// setIsModalOpen(true)
+// }
+//
+// const handleCloseModal = () => {
+// setIsModalOpen(false)
+// }
+
+const ErrorMessage = styled.div`
+  color: red;
+`
+
 const Farm = () => {
   const { account } = useWeb3React()
   const { positions, loading: positionsLoading } = useV3Positions(account)
@@ -47,19 +68,19 @@ const Farm = () => {
     resetFilterString()
   }, [location, resetFilterString])
 
+  //if (positionsError) return <ErrorMessage>Error loading positions.</ErrorMessage>
+
   return (
-    <ExploreContainer>
-      <TitleContainer>
-        <ThemedText.LargeHeader>
-          <Trans>Farms & Incentives</Trans>
-        </ThemedText.LargeHeader>
-      </TitleContainer>
-      {positionsLoading ? (
-        <div>Loading...</div>
-      ) : (
+    <ApolloProvider client={client}>
+      <ExploreContainer>
+        <TitleContainer>
+          <ThemedText.LargeHeader>
+            <Trans>Farms & Incentives</Trans>
+          </ThemedText.LargeHeader>
+        </TitleContainer>
         <TokenTable positions={positions || []} onStake={stakePosition} onUnstake={unstakePosition} />
-      )}
-    </ExploreContainer>
+      </ExploreContainer>
+    </ApolloProvider>
   )
 }
 
