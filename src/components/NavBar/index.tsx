@@ -5,6 +5,7 @@ import Web3Status from 'components/Web3Status'
 import { chainIdToBackendName } from 'graphql/data/util'
 import { useDisableNFTRoutes } from 'hooks/useDisableNFTRoutes'
 import { useIsDocsPage } from 'hooks/useIsDocsPage'
+import { useIsFarmPage } from 'hooks/useIsFarmPage'
 import { useIsNftPage } from 'hooks/useIsNftPage'
 import { useIsPoolsPage } from 'hooks/useIsPoolsPage'
 import { Box } from 'nft/components/Box'
@@ -12,7 +13,7 @@ import { Row } from 'nft/components/Flex'
 import { UniIcon } from 'nft/components/icons'
 import { useProfilePageState } from 'nft/hooks'
 import { ProfilePageStateType } from 'nft/types'
-import { ReactNode, useCallback } from 'react'
+import { ReactNode } from 'react'
 import { NavLink, NavLinkProps, useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -61,6 +62,7 @@ export const PageTabs = () => {
   const isPoolActive = useIsPoolsPage()
   const isDocsActive = useIsDocsPage()
   const isNftPage = useIsNftPage()
+  const isFarmPage = useIsFarmPage()
 
   const shouldDisableNFTRoutes = useDisableNFTRoutes()
 
@@ -74,6 +76,9 @@ export const PageTabs = () => {
       </MenuItem>
       <MenuItem href="/pools" dataTestId="pool-nav-link" isActive={isPoolActive}>
         <Trans>Pool</Trans>
+      </MenuItem>
+      <MenuItem href="/farm" dataTestId="farm-nav-link" isActive={isFarmPage}>
+        <Trans>Farm</Trans>
       </MenuItem>
       <Box marginY={{ sm: '4', md: 'unset' }}>
         <MenuDropdown />
@@ -90,16 +95,6 @@ const Navbar = ({ blur }: { blur: boolean }) => {
 
   const [accountDrawerOpen, toggleAccountDrawer] = useAccountDrawer()
 
-  const handleUniIconClick = useCallback(() => {
-    if (accountDrawerOpen) {
-      toggleAccountDrawer()
-    }
-    navigate({
-      pathname: '/',
-      search: '?intro=true',
-    })
-  }, [accountDrawerOpen, navigate, toggleAccountDrawer])
-
   return (
     <>
       {blur && <Blur />}
@@ -107,13 +102,7 @@ const Navbar = ({ blur }: { blur: boolean }) => {
         <Box display="flex" height="full" flexWrap="nowrap">
           <Box className={styles.leftSideContainer}>
             <Box className={styles.logoContainer}>
-              <UniIcon
-                width="48"
-                height="48"
-                data-testid="uniswap-logo"
-                className={styles.logo}
-                onClick={handleUniIconClick}
-              />
+              <UniIcon width="48" height="48" data-testid="lobo-logo" className={styles.logo} />
             </Box>
             {!isNftPage && (
               <Box display={{ sm: 'flex', lg: 'none' }}>
@@ -141,7 +130,6 @@ const Navbar = ({ blur }: { blur: boolean }) => {
                   <ChainSelector />
                 </Box>
               )}
-
               <Web3Status />
             </Row>
           </Box>

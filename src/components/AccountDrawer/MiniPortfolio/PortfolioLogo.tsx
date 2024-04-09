@@ -102,7 +102,7 @@ interface DoubleCurrencyLogoProps {
   size: string
 }
 
-function DoubleCurrencyLogo({ chainId, currencies, backupImages, size }: DoubleCurrencyLogoProps) {
+export function DoubleCurrencyLogo({ chainId, currencies, backupImages, size }: DoubleCurrencyLogoProps) {
   const [src, nextSrc] = useTokenLogoSource(
     currencies?.[0]?.wrapped.address,
     chainId,

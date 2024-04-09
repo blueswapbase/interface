@@ -1,0 +1,15 @@
+{
+  "tupleType":"tuple(address,address, uint256, uint256, address)",
+  "incentives":[
+     {
+        "rewardToken":"0x4e98b3917310b0e1f0d53c0619f87fe48deb804b",
+        "poolAddress":"0x77514f969ca5ae0f5af7291a9c2e06863dcc6e12",
+        "startDate":1712203200,
+        "endDate":1714622400,
+        "refundee":"0xbB98Fc973c9c8Cd5058F9016F731c38544c1350F",
+        "token0": "0x4e98b3917310b0e1f0d53c0619f87fe48deb804b",
+        "token1": "0x4200000000000000000000000000000000000006",
+        "incentiveId": "0xbb51616e1c388c4ad72ae25c3f3753031dd42c89c717609a4f658e5c4369ccc0"
+     }
+  ]
+}
