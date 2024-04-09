@@ -20,8 +20,8 @@ export const useStakePosition = () => {
       const encodedIncentive = getIncentiveKeyEncoded(incentiveDetails)
       const hashedIncentive = getIncentiveKeyHashed(encodedIncentive)
       try {
-        //const approveTx = await positionContract.approve(STAKER_ADDRESS, tokenId)
-        //await approveTx.wait()
+        const approveTx = await positionContract.approve(STAKER_ADDRESS, tokenId)
+        await approveTx.wait()
 
         const stakeTx = await positionContract['safeTransferFrom(address,address,uint256,bytes)'](
           account,
