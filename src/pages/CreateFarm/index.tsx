@@ -51,7 +51,7 @@ const Input = styled.input`
 
 const CreateFarm = () => {
   const { createNewIncentive } = useCreateNewIncentive()
-
+  const [isIncentiveCreated, setIsIncentiveCreated] = useState(false)
   const [formData, setFormData] = useState({
     pool: '',
     refundee: '',
@@ -83,12 +83,14 @@ const CreateFarm = () => {
       // You might need additional fields here
     }
     console.log(incentiveDetails)
-    await createNewIncentive(incentiveDetails, rewardAmount)
-
-    console.log(formData)
-    // Handle farm creation logic here
-    // After creation, you may want to redirect the user
-    // history.push('/path-to-redirect');
+    try {
+      await createNewIncentive(incentiveDetails, rewardAmount)
+      setIsIncentiveCreated(true) // Update state to indicate success
+      console.log('Incentive created successfully')
+    } catch (error) {
+      console.error('Failed to create incentive:', error)
+      setIsIncentiveCreated(false) // Ensure state is reset on failure
+    }
   }
 
   return (
@@ -127,6 +129,7 @@ const CreateFarm = () => {
             <Input id="refundee" name="refundee" value={formData.refundee} onChange={handleChange} />
           </FormField>
           <ButtonPrimary type="submit">Create Farm</ButtonPrimary>
+          {isIncentiveCreated && <p>Incentive created successfully!</p>}
         </FormContainer>
       </form>
     </CreateFarmContainer>
