@@ -114,13 +114,6 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
     setUnaccountedIncentives(unaccounted || [])
   }, [chainId, positions, stakedTokensData, poolTokensData])
 
-  useEffect(() => {
-    // Initialize displayedIncentives with all existing incentives
-    stakedTokensData?.incentiveCreateds.forEach((incentive: any) => {
-      setDisplayedIncentives((prev) => new Set(prev.add(incentive.id)))
-    })
-  }, [stakedTokensData])
-
   if (stakedTokensLoading || poolTokensLoading) return <div>Loading...</div>
   if (stakedTokensError) return <div>Error loading staked tokens data: {stakedTokensError.message}</div>
   if (poolTokensError) return <div>Error loading pool tokens data: {poolTokensError.message}</div>
@@ -280,25 +273,29 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
             }
           )}
           {unaccountedIncentives.map((incentive, index) => {
-            const poolTokens = poolTokensData?.poolCreateds.find(
-              (pool: { pool: string }) => pool.pool === incentive.pool
-            )
-            if (!poolTokens) return null // Skip if pool not found
+            if (!displayedIncentives.has(incentive.id)) {
+              const poolTokens = poolTokensData?.poolCreateds.find(
+                (pool: { pool: string }) => pool.pool === incentive.pool
+              )
+              if (!poolTokens) return null // Skip if pool not found
 
-            return (
-              <TokenRow
-                key={`unaccounted-incentive-${index}`}
-                token0={poolTokens.token0}
-                token1={poolTokens.token1}
-                incentive={incentive}
-                rewardToken={incentive.rewardToken}
-                isStaked={false}
-                onStake={() => {}}
-                onUnstake={() => {}}
-                showAddLiquidity={true}
-                rewards={getRewards(incentive.rewardToken, account, provider)}
-              />
-            )
+              return (
+                <TokenRow
+                  key={`unaccounted-incentive-${index}`}
+                  token0={poolTokens.token0}
+                  token1={poolTokens.token1}
+                  incentive={incentive}
+                  rewardToken={incentive.rewardToken}
+                  isStaked={false}
+                  onStake={() => {}}
+                  onUnstake={() => {}}
+                  showAddLiquidity={true}
+                  rewards={getRewards(incentive.rewardToken, account, provider)}
+                />
+              )
+            } else {
+              return null
+            }
           })}
         </>
       )}
