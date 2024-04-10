@@ -129,9 +129,9 @@ export const MenuDropdown = () => {
             <Column gap="16">
               <Column paddingX="8" gap="4">
                 <Box display={{ sm: 'none', lg: 'flex', xxl: 'none' }}>
-                  <PrimaryMenuRow to="/pool" close={toggleOpen}>
+                  <PrimaryMenuRow to="/create-farm" close={toggleOpen}>
                     <PrimaryMenuRow.Text>
-                      <Trans>docs</Trans>
+                      <Trans>Docs (coming soon)</Trans>
                     </PrimaryMenuRow.Text>
                   </PrimaryMenuRow>
                 </Box>
@@ -151,7 +151,7 @@ export const MenuDropdown = () => {
                 )}
               </Box>
               <IconRow>
-                <Icon href="https://discord.gg/xDZgASjHHZ">
+                <Icon href="https://discord.gg/h6VFA2MuCB">
                   <DiscordIconMenu
                     className={styles.hover}
                     width={24}
@@ -159,7 +159,7 @@ export const MenuDropdown = () => {
                     color={themeVars.colors.textSecondary}
                   />
                 </Icon>
-                <Icon href="https://x.com/blueswapbase">
+                <Icon href="https://x.com/lobo_base">
                   <TwitterIconMenu
                     className={styles.hover}
                     width={24}
