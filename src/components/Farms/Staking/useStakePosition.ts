@@ -2,6 +2,7 @@
 import { useWeb3React } from '@web3-react/core'
 import { useCallback } from 'react'
 import { getContract } from 'utils'
+import Web3 from 'web3'
 
 import { POSITION_ADDRESS, STAKER_ADDRESS } from '../Staking/config'
 import { getIncentiveKeyEncoded, getIncentiveKeyHashed } from './encodeIncentives'
@@ -23,16 +24,43 @@ export const useStakePosition = () => {
       console.log(hashedIncentive)
       try {
         console.log(STAKER_ADDRESS, tokenId)
-        const approveTx = await positionContract.approve(STAKER_ADDRESS, tokenId)
-        await approveTx.wait()
 
-        const stakeTx = await positionContract['safeTransferFrom(address,address,uint256,bytes)'](
-          account,
-          STAKER_ADDRESS,
-          tokenId,
-          encodedIncentive
-        )
-        await stakeTx.wait()
+        console.log(positionContract)
+
+        const stakingCalls = [
+          positionContract.interface.encodeFunctionData('approve', [STAKER_ADDRESS, tokenId]),
+          positionContract.interface.encodeFunctionData('safeTransferFrom(address,address,uint256,bytes)', [
+            account,
+            STAKER_ADDRESS,
+            tokenId,
+            encodedIncentive,
+          ]),
+        ]
+
+        const bytesArray = stakingCalls.map((hex) => Web3.utils.hexToBytes(hex))
+        const approveAndStake = await positionContract.multicall(bytesArray)
+        await approveAndStake.wait()
+
+        // const approveTx = await positionContract.approve(STAKER_ADDRESS, tokenId)
+        // await approveTx.wait()
+        // console.log('Approved')
+        // const stakeTx = await positionContract['safeTransferFrom(address,address,uint256,bytes)'](
+        // account,
+        // STAKER_ADDRESS,
+        // tokenId,
+        // encodedIncentive
+        // )
+        // await stakeTx.wait()
+        // console.log('Staked')
+
+        // const unstakingCalls = [
+        // stakerContract.interface.encodeFunctionData('unstakeToken', [incentiveTuple, tokenId]),
+        // stakerContract.interface.encodeFunctionData('withdrawToken', [tokenId, account, []]),
+        // ]
+        // const bytesArray = unstakingCalls.map((hex) => Web3.utils.hexToBytes(hex))
+        // const unstakeAndWithdraw = await stakerContract.multicall(bytesArray)
+        // await unstakeAndWithdraw.wait()
+        //
 
         // const stakingCalls = [
         // positionContract.approve(STAKER_ADDRESS, tokenId).encodeABI(),

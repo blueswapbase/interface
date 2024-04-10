@@ -2,12 +2,13 @@
 /* eslint-disable import/no-unused-modules */
 import { ButtonPrimary } from 'components/Button'
 import { DoubleCurrencyLogo } from 'components/AccountDrawer/MiniPortfolio/PortfolioLogo'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useWeb3React } from '@web3-react/core'
 import styled from 'styled-components'
 import { useCurrency } from 'hooks/Tokens'
 // eslint-disable-next-line @typescript-eslint/no-restricted-imports
 import { Currency } from 'blueswap-sdk-core'
+import { getRewards } from '../Staking/getRewards'
 
 const Row = styled.div`
   display: flex;
@@ -23,7 +24,7 @@ const TokenInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  justify-content: space-around; // Adjust the spacing between elements as needed
+  justify-content: space-around;
 `
 
 const ActionButton = styled(ButtonPrimary)`
@@ -37,38 +38,66 @@ const ActionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 8px; // Adjust based on your design
+  gap: 8px;
 `
+function formatNumberWithCommas(x: number) {
+  return Intl.NumberFormat('en-US').format(x)
+}
 
 interface TokenRowProps {
   token0: string
   token1: string
-  tokenId: number // Accept tokenId directly
+  tokenId?: number
   incentive: any
+  rewardToken: any
   onStake: (tokenId: number, incentive: any) => void
   onUnstake: (tokenId: number, incentive: any) => void
   isStaked: boolean
+  rewards: any
 }
 
-const TokenRow: React.FC<TokenRowProps> = ({ token0, token1, tokenId, incentive, onStake, onUnstake, isStaked }) => {
-  const { chainId } = useWeb3React()
+const TokenRow: React.FC<TokenRowProps> = ({
+  token0,
+  token1,
+  tokenId,
+  incentive,
+  rewardToken,
+  onStake,
+  onUnstake,
+  isStaked,
+}) => {
+  const { chainId, account, provider } = useWeb3React()
   const token0Currency = useCurrency(token0)
   const token1Currency = useCurrency(token1)
+  const rewardTokenCurrency = useCurrency(rewardToken)
 
   const validCurrencies = [token0Currency, token1Currency].filter((currency): currency is Currency => !!currency)
 
+  const [rewards, setRewards] = useState('Loading...')
+
+  useEffect(() => {
+    if (incentive && incentive.rewardToken && incentive.rewardToken !== '0x') {
+      getRewards(incentive.rewardToken, account, provider)
+        .then(setRewards)
+        .catch((error) => {
+          console.error('Failed to fetch rewards:', error)
+          setRewards('Failed to load')
+        })
+    } else {
+      setRewards('No rewards')
+    }
+  }, [incentive, tokenId, provider])
+
   const handleStake = () => {
-    onStake(tokenId, incentive)
-    console.log(tokenId)
-    console.log(incentive)
-    console.log(onStake)
+    if (typeof tokenId === 'number') {
+      onStake(tokenId, incentive)
+    }
   }
 
   const handleUnstake = () => {
-    onUnstake(tokenId, incentive)
-    console.log(tokenId)
-    console.log(incentive)
-    console.log(onUnstake)
+    if (typeof tokenId === 'number') {
+      onUnstake(tokenId, incentive)
+    }
   }
 
   return (
@@ -85,7 +114,9 @@ const TokenRow: React.FC<TokenRowProps> = ({ token0, token1, tokenId, incentive,
         <div>{tokenId}</div>
       </TokenInfo>
       <TokenInfo>
-        <div></div>
+        <div>
+          {formatNumberWithCommas(parseInt(rewards))} {rewardTokenCurrency?.name}
+        </div>
       </TokenInfo>
       <ActionContainer>
         {incentive ? (
