@@ -10,13 +10,8 @@ export async function getRewards(rewardToken: any, account: string | undefined, 
 
   const stakerContract = getContract(STAKER_ADDRESS, stakerABI, provider)
 
-  try {
-    // Directly call the rewards method. No need to access a 'methods' property.
-    const rewardAmount = await stakerContract['rewards(address,address)'](rewardToken, account)
-    const formattedRewardAmount = formatUnits(rewardAmount, 18)
-    return Number(formattedRewardAmount).toFixed(4)
-  } catch (error) {
-    console.error('Failed to fetch rewards:', error)
-    return '0'
-  }
+  // Directly call the rewards method. No need to access a 'methods' property.
+  const rewardAmount = await stakerContract['rewards(address,address)'](rewardToken, account)
+  const formattedRewardAmount = formatUnits(rewardAmount, 18)
+  return Number(formattedRewardAmount).toFixed(4)
 }

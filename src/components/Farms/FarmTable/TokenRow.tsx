@@ -10,9 +10,11 @@ import { useCurrency } from 'hooks/Tokens'
 import { Currency } from 'blueswap-sdk-core'
 import { getRewards } from '../Staking/getRewards'
 import { Link } from 'react-router-dom'
+import { useClaimRewards } from '../Staking/claimRewards'
 
 const Row = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: space-around;
   padding: 10px 0px;
@@ -78,6 +80,14 @@ const TokenRow: React.FC<TokenRowProps> = ({
   const token0Currency = useCurrency(token0)
   const token1Currency = useCurrency(token1)
   const rewardTokenCurrency = useCurrency(rewardToken)
+  const rewardTokenString = rewardToken
+
+  const claimRewards = useClaimRewards()
+  const handleClaimRewards = async () => {
+    const rewardToken = rewardTokenString
+
+    await claimRewards(rewardToken)
+  }
 
   const validCurrencies = [token0Currency, token1Currency].filter((currency): currency is Currency => !!currency)
 
@@ -122,9 +132,16 @@ const TokenRow: React.FC<TokenRowProps> = ({
         <div>{tokenId}</div>
       </TokenInfo>
       <TokenInfo>
-        <div>
-          {formatNumberWithCommas(parseInt(rewards))} {rewardTokenCurrency?.name}
-        </div>
+        {parseInt(rewards) > 0 ? (
+          <>
+            <div>
+              {formatNumberWithCommas(parseInt(rewards))} {rewardTokenCurrency?.name}
+            </div>
+            <ButtonPrimary onClick={handleClaimRewards}>Claim Rewards</ButtonPrimary>
+          </>
+        ) : (
+          <div>No rewards available</div>
+        )}
       </TokenInfo>
       <ActionContainer>
         {incentive ? (
