@@ -32,6 +32,7 @@ const TokenInfo = styled.div`
 
 const ActionButton = styled(ButtonPrimary)`
   padding: 0.5rem 1rem;
+  max-width: 100px;
 `
 
 const AddLiquidityButton = styled(ButtonPrimary)`
@@ -137,7 +138,7 @@ const TokenRow: React.FC<TokenRowProps> = ({
             <div>
               {formatNumberWithCommas(parseInt(rewards))} {rewardTokenCurrency?.name}
             </div>
-            <ButtonPrimary onClick={handleClaimRewards}>Claim Rewards</ButtonPrimary>
+            <ActionButton onClick={handleClaimRewards}>Claim Rewards</ActionButton>
           </>
         ) : (
           <div>No rewards available</div>
