@@ -9,6 +9,7 @@ import { useCurrency } from 'hooks/Tokens'
 // eslint-disable-next-line @typescript-eslint/no-restricted-imports
 import { Currency } from 'blueswap-sdk-core'
 import { getRewards } from '../Staking/getRewards'
+import { Link } from 'react-router-dom'
 
 const Row = styled.div`
   display: flex;
@@ -30,6 +31,11 @@ const TokenInfo = styled.div`
 const ActionButton = styled(ButtonPrimary)`
   padding: 0.5rem 1rem;
 `
+
+const AddLiquidityButton = styled(ButtonPrimary)`
+  padding: 0.5rem 1rem;
+`
+
 const NoIncentiveMessage = styled.div`
   color: ${({ theme }) => theme.textSecondary};
   font-size: 0.875rem;
@@ -54,6 +60,7 @@ interface TokenRowProps {
   onUnstake: (tokenId: number, incentive: any) => void
   isStaked: boolean
   rewards: any
+  showAddLiquidity?: boolean
 }
 
 const TokenRow: React.FC<TokenRowProps> = ({
@@ -65,6 +72,7 @@ const TokenRow: React.FC<TokenRowProps> = ({
   onStake,
   onUnstake,
   isStaked,
+  showAddLiquidity,
 }) => {
   const { chainId, account, provider } = useWeb3React()
   const token0Currency = useCurrency(token0)
@@ -121,12 +129,20 @@ const TokenRow: React.FC<TokenRowProps> = ({
       <ActionContainer>
         {incentive ? (
           <>
-            <ActionButton onClick={handleStake} disabled={false}>
-              Stake
-            </ActionButton>
-            <ActionButton onClick={handleUnstake} disabled={false}>
-              Unstake
-            </ActionButton>
+            {showAddLiquidity ? (
+              <ButtonPrimary as={Link} to={`/add/${token0}/${token1}/3000`}>
+                Add Liquidity
+              </ButtonPrimary>
+            ) : (
+              <>
+                <ActionButton onClick={handleStake} disabled={false}>
+                  Stake
+                </ActionButton>
+                <ActionButton onClick={handleUnstake} disabled={false}>
+                  Unstake
+                </ActionButton>
+              </>
+            )}
           </>
         ) : (
           <NoIncentiveMessage>No current incentives for this position</NoIncentiveMessage>
