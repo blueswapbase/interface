@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client'
-import { computePoolAddress, FeeAmount } from '@uniswap/v3-sdk'
+import { computePoolAddress } from '@uniswap/v3-sdk'
 import { useWeb3React } from '@web3-react/core'
 import { Token, V3_CORE_FACTORY_ADDRESSES } from 'blueswap-sdk-core'
 import { GET_POOL_TOKENS } from 'components/Farms/Staking/poolsQuery'
@@ -70,13 +70,15 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
         factoryAddress: V3_CORE_FACTORY_ADDRESSES[chainId],
         tokenA,
         tokenB,
-        fee: FeeAmount.MEDIUM,
+        fee: position.fee,
       }).toLowerCase()
 
       newDisplayedPools.add(poolAddress)
     })
     setDisplayedPools(newDisplayedPools)
   }, [positions, chainId])
+
+  console.log('Displayed Pools: ', displayedPools)
 
   useEffect(() => {
     if (stakedTokensData && account) {
@@ -88,6 +90,7 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
       setOwnedTokenIds(ownedIds)
     }
   }, [stakedTokensData, account])
+  console.log('Owned Token IDs', ownedTokenIds)
 
   useEffect(() => {
     // Identify unaccounted incentives
@@ -98,7 +101,7 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
         factoryAddress: V3_CORE_FACTORY_ADDRESSES[chainId],
         tokenA: new Token(chainId, position.token0, 18),
         tokenB: new Token(chainId, position.token1, 18),
-        fee: FeeAmount.MEDIUM,
+        fee: position.fee,
       }).toLowerCase()
 
       stakedTokensData?.incentiveCreateds.forEach((incentive: any) => {
@@ -113,6 +116,7 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
     )
     setUnaccountedIncentives(unaccounted || [])
   }, [chainId, positions, stakedTokensData, poolTokensData])
+  console.log('Unaccounted incentives:', unaccountedIncentives)
 
   if (stakedTokensLoading || poolTokensLoading) return <div>Loading...</div>
   if (stakedTokensError) return <div>Error loading staked tokens data: {stakedTokensError.message}</div>
@@ -120,6 +124,7 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
   if (!chainId) return null
 
   const incentives = stakedTokensData?.incentiveCreateds ?? []
+  console.log('Incentives: ', incentives)
 
   let ownedTokenId: number | null = null
 
@@ -152,12 +157,15 @@ const TokenTable: React.FC<TokenTableProps> = ({ positions, onStake, onUnstake }
               factoryAddress: V3_CORE_FACTORY_ADDRESSES[chainId],
               tokenA,
               tokenB,
-              fee: FeeAmount.MEDIUM, // Adjust based on your fee tier
+              fee: position.fee, // Adjust based on your fee tier
             }).toLowerCase()
 
             const incentive = stakedTokensData.incentiveCreateds.find(
               (inc: { pool: string }) => inc.pool.toLowerCase() === poolAddress
             )
+            console.log('Pools found:', incentive)
+
+            console.log(position)
 
             let isOwnedByAccount = false
             stakedTokensData.tokenStakeds.forEach((staked: { tokenId: string }) => {
